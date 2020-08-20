@@ -1,0 +1,1854 @@
+{
+  "stats": {
+    "suites": 33,
+    "tests": 94,
+    "passes": 8,
+    "pending": 76,
+    "failures": 10,
+    "start": "2020-08-20T12:40:46.364Z",
+    "end": "2020-08-20T12:41:33.624Z",
+    "duration": 47260
+  },
+  "suites": [
+    {
+      "title": "Basic Documents",
+      "tests": []
+    },
+    {
+      "title": "@context",
+      "tests": [
+        {
+          "fullTitle": "@context MUST be one or more URIs",
+          "title": "MUST be one or more URIs",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "@context MUST be one or more URIs (negative)",
+          "title": "MUST be one or more URIs (negative)",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "@context first value MUST be https://www.w3.org/2018/credentials/v1",
+          "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "@context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+          "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "@context subsequent items can be objects that express context information",
+          "title": "subsequent items can be objects that express context information",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "`id` properties",
+      "tests": [
+        {
+          "fullTitle": "`id` properties MUST be a single URI",
+          "title": "MUST be a single URI",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`id` properties MUST be a single URI (negative)",
+          "title": "MUST be a single URI (negative)",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "`type` properties",
+      "tests": [
+        {
+          "fullTitle": "`type` properties MUST be one or more URIs",
+          "title": "MUST be one or more URIs",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`type` properties MUST be one or more URIs (negative)",
+          "title": "MUST be one or more URIs (negative)",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`type` properties for Credential MUST be `VerifiableCredential` plus specific type",
+          "title": "for Credential MUST be `VerifiableCredential` plus specific type",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+          "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "`credentialSubject` property",
+      "tests": [
+        {
+          "fullTitle": "`credentialSubject` property MUST be present",
+          "title": "MUST be present",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`credentialSubject` property MUST be present, may be a set of objects",
+          "title": "MUST be present, may be a set of objects",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`credentialSubject` property MUST be present (negative - credentialSubject missing)",
+          "title": "MUST be present (negative - credentialSubject missing)",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "`issuer` property",
+      "tests": [
+        {
+          "fullTitle": "`issuer` property MUST be present",
+          "title": "MUST be present",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`issuer` property MUST be present (negative - missing issuer)",
+          "title": "MUST be present (negative - missing issuer)",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`issuer` property MUST be a single URI",
+          "title": "MUST be a single URI",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`issuer` property MUST be a single URI (negative - not URI)",
+          "title": "MUST be a single URI (negative - not URI)",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`issuer` property MUST be a single URI (negative - Array)",
+          "title": "MUST be a single URI (negative - Array)",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "`issuanceDate` property",
+      "tests": [
+        {
+          "fullTitle": "`issuanceDate` property MUST be present",
+          "title": "MUST be present",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`issuanceDate` property MUST be present (negative - missing issuanceDate)",
+          "title": "MUST be present (negative - missing issuanceDate)",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`issuanceDate` property MUST be an RFC3339 datetime",
+          "title": "MUST be an RFC3339 datetime",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+          "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
+          "title": "MUST be an RFC3339 datetime (negative - Array)",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "`expirationDate` property",
+      "tests": [
+        {
+          "fullTitle": "`expirationDate` property MUST be an RFC3339 datetime",
+          "title": "MUST be an RFC3339 datetime",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+          "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
+          "title": "MUST be an RFC3339 datetime (negative - Array)",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "Presentations",
+      "tests": [
+        {
+          "fullTitle": "Presentations MUST be of type `VerifiablePresentation`",
+          "title": "MUST be of type `VerifiablePresentation`",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "Presentations MUST include `verifiableCredential` and `proof`",
+          "title": "MUST include `verifiableCredential` and `proof`",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+          "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+          "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "Credential Schema (optional)",
+      "tests": [
+        {
+          "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
+          "title": "`credentialSchema` MUST provide one or more data schemas",
+          "result": "pending",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "each object within `credentialSchema`...",
+      "tests": [
+        {
+          "fullTitle": "each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+          "title": "MUST specify a `type` property with a valid value",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "each object within `credentialSchema`... MUST specify an `id` property",
+          "title": "MUST specify an `id` property",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+          "title": "value of `id` MUST be a URI identifying a schema file",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "Refresh Service (optional)",
+      "tests": [
+        {
+          "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
+          "title": "`refreshService` MUST provide one or more refresh services",
+          "result": "pending",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "each object within `refreshService`...",
+      "tests": [
+        {
+          "fullTitle": "each object within `refreshService`... MUST specify a `type` property with a valid value",
+          "title": "MUST specify a `type` property with a valid value",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "each object within `refreshService`... MUST specify an `id` property",
+          "title": "MUST specify an `id` property",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
+          "title": "value of `id` MUST be a URL identifying a service endpoint",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "Evidence (optional)",
+      "tests": [
+        {
+          "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
+          "title": "`evidence` MUST provide one or more evidence objects",
+          "result": "pending",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "each object within `evidence`...",
+      "tests": [
+        {
+          "fullTitle": "each object within `evidence`... MUST specify a `type` property with a valid value",
+          "title": "MUST specify a `type` property with a valid value",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "Credential Status (optional)",
+      "tests": []
+    },
+    {
+      "title": "`credentialStatus` property",
+      "tests": [
+        {
+          "fullTitle": "`credentialStatus` property MUST include `id` and `type`",
+          "title": "MUST include `id` and `type`",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
+          "title": "MUST include `id` and `type` (negative - missing `id`)",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "`credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
+          "title": "MUST include `id` and `type` (negative - missing `type`)",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "Terms of Use (optional)",
+      "tests": [
+        {
+          "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
+          "title": "`termsOfUse` MUST provide one or more ToU objects",
+          "result": "pending",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "each object within `termsOfUse`...",
+      "tests": [
+        {
+          "fullTitle": "each object within `termsOfUse`... MUST specify a `type` property with a valid value",
+          "title": "MUST specify a `type` property with a valid value",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "Linked Data Proofs (optional)",
+      "tests": []
+    },
+    {
+      "title": "`proof` property",
+      "tests": [
+        {
+          "fullTitle": "`proof` property MUST be present",
+          "title": "MUST be present",
+          "result": "pending",
+          "err": {}
+        },
+        {
+          "fullTitle": "`proof` property MUST include specific method using the type property",
+          "title": "MUST include specific method using the type property",
+          "result": "pending",
+          "err": {}
+        },
+        {
+          "fullTitle": "`proof` property MUST include type property (negative - missing proof type)",
+          "title": "MUST include type property (negative - missing proof type)",
+          "result": "pending",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "JWT (optional)",
+      "tests": []
+    },
+    {
+      "title": "A verifiable credential ...",
+      "tests": [
+        {
+          "fullTitle": "A verifiable credential ... vc MUST be present in a JWT verifiable credential.",
+          "title": "vc MUST be present in a JWT verifiable credential.",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part...",
+      "tests": [
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
+          "title": "If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... if typ is present, it MUST be set to JWT.",
+          "title": "if typ is present, it MUST be set to JWT.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... alg MUST be used for RSA and ECDSA-based digital signatures.",
+          "title": "alg MUST be used for RSA and ECDSA-based digital signatures.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no JWS is present, a proof property MUST be provided.",
+          "title": "If no JWS is present, a proof property MUST be provided.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If only the proof attribute is used, the alg header MUST be set to none.",
+          "title": "If only the proof attribute is used, the alg header MUST be set to none.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
+          "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
+          "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... iss MUST represent the issuer property.",
+          "title": "iss MUST represent the issuer property.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
+          "title": "nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential.",
+          "title": "jti MUST represent the id property of the verifiable credential.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
+          "title": "jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... sub MUST represent the id property contained in the verifiable credential subject.",
+          "title": "sub MUST represent the id property contained in the verifiable credential subject.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... Additional claims MUST be added to the credentialSubject property of the JWT.",
+          "title": "Additional claims MUST be added to the credentialSubject property of the JWT.",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "To decode a JWT to a standard verifiable credential, the following transformation MUST be performed...",
+      "tests": [
+        {
+          "fullTitle": "To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... Add the content from the vc property to the new JSON object.",
+          "title": "Add the content from the vc property to the new JSON object.",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "To transform the JWT specific headers and claims, the following MUST be done:",
+      "tests": [
+        {
+          "fullTitle": "To transform the JWT specific headers and claims, the following MUST be done: If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
+          "title": "If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To transform the JWT specific headers and claims, the following MUST be done: If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
+          "title": "If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To transform the JWT specific headers and claims, the following MUST be done: If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
+          "title": "If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To transform the JWT specific headers and claims, the following MUST be done: If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
+          "title": "If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "To transform the JWT specific headers and claims, the following MUST be done: If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
+          "title": "If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "A verifiable presentation ...",
+      "tests": [
+        {
+          "fullTitle": "A verifiable presentation ... vp MUST be present in a JWT verifiable presentation",
+          "title": "vp MUST be present in a JWT verifiable presentation",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "A verifiable presentation ... aud MUST represent the subject of the consumer of the verifiable presentation",
+          "title": "aud MUST represent the subject of the consumer of the verifiable presentation",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation",
+          "title": "jti MUST represent the id property of [...] the verifiable presentation",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
+          "title": "jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation",
+          "title": "iss MUST represent [...] the holder property of a verifiable presentation",
+          "result": "unknown",
+          "err": {}
+        },
+        {
+          "fullTitle": "A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
+          "title": "iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
+          "result": "unknown",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "Zero-Knowledge Proofs (optional)",
+      "tests": []
+    },
+    {
+      "title": "A verifiable credential...",
+      "tests": [
+        {
+          "fullTitle": "A verifiable credential... MUST contain a credentialSchema",
+          "title": "MUST contain a credentialSchema",
+          "duration": 3552,
+          "result": "passed",
+          "err": {}
+        },
+        {
+          "fullTitle": "A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
+          "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+          "duration": 3869,
+          "result": "failed",
+          "err": {
+            "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
+            "showDiff": true,
+            "actual": {
+              "@context": [
+                "https://www.w3.org/2018/credentials/v1",
+                "https://www.w3.org/2018/credentials/examples/v1"
+              ],
+              "type": [
+                "VerifiableCredential",
+                "UniversityDegreeCredential"
+              ],
+              "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+              "issuanceDate": "2010-01-01T19:23:24Z",
+              "credentialSubject": {
+                "givenName": "Jane",
+                "familyName": "Doe",
+                "degree": {
+                  "type": "BachelorDegree",
+                  "name": "Bachelor of Science in Mechanical Engineering",
+                  "college": "College of Engineering"
+                }
+              },
+              "proof": {
+                "type": "MerkleProof2019",
+                "created": "2020-08-20T14:40:53.757841",
+                "proofValue": "zMcm4LfQFUZkWZyN6A3aNFvufMEDPLiBrDKE6gkQ9K6dfK5BRguDxSnGs1CTjneu4kZgvwKMBE8VAavkChzoDt2bMWPCjrNMcUJhh8KeGcVGgf4GifUTuUL1QWaPDUfpkkuxpwYCgCF6iFc2FJEGLpdvBqp8GDww53JwTguQpStC9riNvauXFANSo2HWCCsgv82cr8E9p4ijtEiv5PJTNW5w9n7mu7fqjBAQGmdLKYS3f3gTzJ36GMfzcF1Yj2RbTWMQhXernGUNknt6SgJMk1Gj2SvBiMR8DX4qNZn7AfSyPpuiKYY",
+                "proofPurpose": "assertionMethod",
+                "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
+              }
+            },
+            "expected": "Error",
+            "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
+          }
+        },
+        {
+          "fullTitle": "A verifiable credential... MUST contain a proof",
+          "title": "MUST contain a proof",
+          "duration": 3866,
+          "result": "passed",
+          "err": {}
+        },
+        {
+          "fullTitle": "A verifiable credential... MUST contain a proof (negative - missing)",
+          "title": "MUST contain a proof (negative - missing)",
+          "duration": 3798,
+          "result": "failed",
+          "err": {
+            "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
+            "showDiff": true,
+            "actual": {
+              "@context": [
+                "https://www.w3.org/2018/credentials/v1",
+                "https://www.w3.org/2018/credentials/examples/v1"
+              ],
+              "type": [
+                "VerifiableCredential",
+                "UniversityDegreeCredential"
+              ],
+              "credentialSchema": {
+                "id": "did:example:cdf:35LB7w9ueWbagPL94T9bMLtyXDj9pX5o",
+                "type": "did:example:schema:22KpkXgecryx9k7N6XN1QoN3gXwBkSU8SfyyYQG"
+              },
+              "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+              "issuanceDate": "2010-01-01T19:23:24Z",
+              "credentialSubject": {
+                "givenName": "Jane",
+                "familyName": "Doe",
+                "degree": {
+                  "type": "BachelorDegree",
+                  "name": "Bachelor of Science in Mechanical Engineering",
+                  "college": "College of Engineering"
+                }
+              },
+              "proof": {
+                "type": "MerkleProof2019",
+                "created": "2020-08-20T14:41:01.416152",
+                "proofValue": "zMcm4LfQFUZkWZxqSy4UiHK788pxmE6Ha9s6bU387XfDLisCqPGfkUNtAsxr3q19t2WZLoAJ7dLDSGEpuLoeTwPVe6dGjf3AhfRWehsn3JKaEH2dJry4hpXoRdAkU9xhZq3BipP8NWfw1Yix9nZLYPrgMHSnFKzezpKUc4wHJXU6qMHUGEdQcr2GZ7qpFjE78e8GE3rYBVELL5mVEEQXxYG6DwVqKU7MqDXZWhi5cpQiGXKNjDcdf9soz15GH1E4ZakjNe4rYsiQFebZNB74aRgRJe63CPnZStLCdvndBfcKuYGLDeC",
+                "proofPurpose": "assertionMethod",
+                "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
+              }
+            },
+            "expected": "Error",
+            "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Each credentialSchema...",
+      "tests": [
+        {
+          "fullTitle": "Each credentialSchema... MUST specify a type",
+          "title": "MUST specify a type",
+          "duration": 3756,
+          "result": "passed",
+          "err": {}
+        },
+        {
+          "fullTitle": "Each credentialSchema... MUST specify a type (negative - type missing)",
+          "title": "MUST specify a type (negative - type missing)",
+          "duration": 4040,
+          "result": "failed",
+          "err": {
+            "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
+            "showDiff": true,
+            "actual": {
+              "@context": [
+                "https://www.w3.org/2018/credentials/v1",
+                "https://www.w3.org/2018/credentials/examples/v1"
+              ],
+              "type": [
+                "VerifiableCredential",
+                "UniversityDegreeCredential"
+              ],
+              "credentialSchema": {
+                "id": "did:example:cdf:35LB7w9ueWbagPL94T9bMLtyXDj9pX5o"
+              },
+              "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+              "issuanceDate": "2010-01-01T19:23:24Z",
+              "credentialSubject": {
+                "givenName": "Jane",
+                "familyName": "Doe",
+                "degree": {
+                  "type": "BachelorDegree",
+                  "name": "Bachelor of Science in Mechanical Engineering",
+                  "college": "College of Engineering"
+                }
+              },
+              "proof": {
+                "type": "MerkleProof2019",
+                "created": "2020-08-20T14:41:09.220380",
+                "proofValue": "zMcm4LfQFUZkWZxsqZqtVshK3gbSNbEGGPZURmq5McfYRfCJSLRpYeHvo1668QAF7jUCJP5uzJMzf6v1XDJaamTyNMMFrTVdWVpqq8QoK6RxioJr4dDVqygjzCgtRe4uMKeGVUbC7y8LqNqjxc46jD55EsHPtkjziJmPPttKy8Qa8SasLxMg7k1JgQfwrssicCXfGjZWjyfxPakwVFErFk5LZtTvz8zmfgqt6v4xsWuSWepdHBhynhrw1HnWvSUfcccWFZJBLuKu6nQvPxnYJsUywFoCnnPEcsNENxZU43KmG5QC4BV",
+                "proofPurpose": "assertionMethod",
+                "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
+              }
+            },
+            "expected": "Error",
+            "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
+          }
+        },
+        {
+          "fullTitle": "Each credentialSchema... MUST specify an `id` property",
+          "title": "MUST specify an `id` property",
+          "duration": 3798,
+          "result": "passed",
+          "err": {}
+        },
+        {
+          "fullTitle": "Each credentialSchema... MUST specify an `id` property (negative - `id` missing)",
+          "title": "MUST specify an `id` property (negative - `id` missing)",
+          "duration": 3798,
+          "result": "failed",
+          "err": {
+            "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
+            "showDiff": true,
+            "actual": {
+              "@context": [
+                "https://www.w3.org/2018/credentials/v1",
+                "https://www.w3.org/2018/credentials/examples/v1"
+              ],
+              "type": [
+                "VerifiableCredential",
+                "UniversityDegreeCredential"
+              ],
+              "credentialSchema": {
+                "type": "did:example:schema:22KpkXgecryx9k7N6XN1QoN3gXwBkSU8SfyyYQG"
+              },
+              "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+              "issuanceDate": "2010-01-01T19:23:24Z",
+              "credentialSubject": {
+                "givenName": "Jane",
+                "familyName": "Doe",
+                "degree": {
+                  "type": "BachelorDegree",
+                  "name": "Bachelor of Science in Mechanical Engineering",
+                  "college": "College of Engineering"
+                }
+              },
+              "proof": {
+                "type": "MerkleProof2019",
+                "created": "2020-08-20T14:41:16.809526",
+                "proofValue": "zMcm4LfQFUZkWZyMZReNHq6LjLBdRcfj5shFa9jWjJLdqJ2MFnkioMeb5LgJX7EWyQF9YD4EhKfUCuQnnj9HFb2QcoWjR3LowtJS8gvqnGkJf347xbi2u3bD55sT8rogUDBvjKwW2X16FgQNGcycNBCwXujnookXF86BmwJZQCPC68k3mcsQYB99KPgwWFffvKRb2RcN7QJDCKAcCi1EF3owHgCWW8wiXBVxbdM2V4hxAoNfbWxkBxcwryDweruVweqkaKdKE9Em4ChTb3QAXq1bMB5NDmMrPmWQzVgn7ud5HNYu4W3",
+                "proofPurpose": "assertionMethod",
+                "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
+              }
+            },
+            "expected": "Error",
+            "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
+          }
+        },
+        {
+          "fullTitle": "Each credentialSchema... value of `id` MUST be a URI identifying a schema file",
+          "title": "value of `id` MUST be a URI identifying a schema file",
+          "duration": 5279,
+          "result": "passed",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "Each proof...",
+      "tests": [
+        {
+          "fullTitle": "Each proof... MUST include specific method using the type property",
+          "title": "MUST include specific method using the type property",
+          "duration": 3620,
+          "result": "passed",
+          "err": {}
+        },
+        {
+          "fullTitle": "Each proof... proof MUST include type property (negative - missing proof type)",
+          "title": "proof MUST include type property (negative - missing proof type)",
+          "duration": 3615,
+          "result": "failed",
+          "err": {
+            "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
+            "showDiff": true,
+            "actual": {
+              "@context": [
+                "https://www.w3.org/2018/credentials/v1",
+                "https://www.w3.org/2018/credentials/examples/v1"
+              ],
+              "type": [
+                "VerifiableCredential",
+                "UniversityDegreeCredential"
+              ],
+              "credentialSchema": {
+                "id": "did:example:cdf:35LB7w9ueWbagPL94T9bMLtyXDj9pX5o",
+                "type": "did:example:schema:22KpkXgecryx9k7N6XN1QoN3gXwBkSU8SfyyYQG"
+              },
+              "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+              "issuanceDate": "2010-01-01T19:23:24Z",
+              "credentialSubject": {
+                "givenName": "Jane",
+                "familyName": "Doe",
+                "degree": {
+                  "type": "BachelorDegree",
+                  "name": "Bachelor of Science in Mechanical Engineering",
+                  "college": "College of Engineering"
+                }
+              },
+              "proof": {
+                "type": "MerkleProof2019",
+                "created": "2020-08-20T14:41:29.314715",
+                "proofValue": "zMcm4LfQFUZkWZyN58t7RHbNUPEZ3JAaKS4Lj7STkyuXSQW8pVfoZnWzFU4nbLMjVFPeiKbZEV2zMWeQ7b1Ue7gAdPmbzQUwwtBHLayGZrArRzqh1qafeqqf5kgmTgkQ8vKsZeSPsnRkkrr3n6XQAG5gjkgJ973eMcbx8srRiqDDfunrmmJKV7omKur3vrCJUNVchC8gSHqrqjkkCMkHiB6EycTd2X7w89dVbpRU2tNkB64a6qMc9Jp1u1B7QRDpKzr9yuo7oyGxfwLEvhVPmckMkjjyarhzKzHAhb5sRddoc2YB9F7",
+                "proofPurpose": "assertionMethod",
+                "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
+              }
+            },
+            "expected": "Error",
+            "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
+          }
+        }
+      ]
+    },
+    {
+      "title": "A verifiable presentation...",
+      "tests": [
+        {
+          "fullTitle": "A verifiable presentation... MUST be of type `VerifiablePresentation`",
+          "title": "MUST be of type `VerifiablePresentation`",
+          "duration": 7,
+          "result": "failed",
+          "err": {
+            "stack": "Error: Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n\n    at ChildProcess.exithandler (child_process.js:299:12)\n    at maybeClose (internal/child_process.js:999:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:266:5)",
+            "message": "Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n",
+            "killed": false,
+            "code": 126,
+            "signal": null,
+            "cmd": "  /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld",
+            "stdout": "",
+            "stderr": "/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n"
+          }
+        },
+        {
+          "fullTitle": "A verifiable presentation... MUST include `verifiableCredential`",
+          "title": "MUST include `verifiableCredential`",
+          "duration": 7,
+          "result": "failed",
+          "err": {
+            "stack": "Error: Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n\n    at ChildProcess.exithandler (child_process.js:299:12)\n    at maybeClose (internal/child_process.js:999:16)\n    at Socket.stream.socket.on (internal/child_process.js:403:11)\n    at Pipe._handle.close (net.js:614:12)",
+            "message": "Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n",
+            "killed": false,
+            "code": 126,
+            "signal": null,
+            "cmd": "  /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld",
+            "stdout": "",
+            "stderr": "/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n"
+          }
+        },
+        {
+          "fullTitle": "A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+          "title": "MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+          "duration": 8,
+          "result": "passed",
+          "err": {}
+        },
+        {
+          "fullTitle": "A verifiable presentation... MUST NOT leak information",
+          "title": "MUST NOT leak information",
+          "result": "pending",
+          "err": {}
+        },
+        {
+          "fullTitle": "A verifiable presentation... MUST include `proof`",
+          "title": "MUST include `proof`",
+          "duration": 7,
+          "result": "failed",
+          "err": {
+            "stack": "Error: Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n\n    at ChildProcess.exithandler (child_process.js:299:12)\n    at maybeClose (internal/child_process.js:999:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:266:5)",
+            "message": "Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n",
+            "killed": false,
+            "code": 126,
+            "signal": null,
+            "cmd": "  /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld",
+            "stdout": "",
+            "stderr": "/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n"
+          }
+        },
+        {
+          "fullTitle": "A verifiable presentation... MUST include `proof` (negative - missing `proof`)",
+          "title": "MUST include `proof` (negative - missing `proof`)",
+          "duration": 8,
+          "result": "passed",
+          "err": {}
+        }
+      ]
+    },
+    {
+      "title": "Each verifiable credential...",
+      "tests": [
+        {
+          "fullTitle": "Each verifiable credential... MUST have a `credentialSchema` member",
+          "title": "MUST have a `credentialSchema` member",
+          "duration": 15,
+          "result": "failed",
+          "err": {
+            "stack": "Error: Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n\n    at ChildProcess.exithandler (child_process.js:299:12)\n    at maybeClose (internal/child_process.js:999:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:266:5)",
+            "message": "Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n",
+            "killed": false,
+            "code": 126,
+            "signal": null,
+            "cmd": "  /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld",
+            "stdout": "",
+            "stderr": "/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n"
+          }
+        },
+        {
+          "fullTitle": "Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
+          "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+          "duration": 4178,
+          "result": "failed",
+          "err": {
+            "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
+            "showDiff": true,
+            "actual": {
+              "@context": [
+                "https://www.w3.org/2018/credentials/v1",
+                "https://www.w3.org/2018/credentials/examples/v1"
+              ],
+              "type": "VerifiablePresentation",
+              "verifiableCredential": {
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "https://www.w3.org/2018/credentials/examples/v1"
+                ],
+                "type": [
+                  "VerifiableCredential",
+                  "UniversityDegreeCredential"
+                ],
+                "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+                "issuanceDate": "2010-01-01T19:23:24Z",
+                "credentialSubject": {
+                  "degreeType": "BachelorDegree",
+                  "degreeSchool": "College of Engineering"
+                },
+                "proof": {
+                  "type": "ex:AnonCredDerivedCredentialv1",
+                  "primaryProof": "cg7wLNSi48K5qNyAVMwdYqVHSMv1Ur8i...Fg2ZvWF6zGvcSAsym2sgSk737",
+                  "nonRevocationProof": "mu6fg24MfJPU1HvSXsf3ybzKARib4WxG...RSce53M6UwQCxYshCuS3d2h"
+                }
+              },
+              "proof": {
+                "type": "MerkleProof2019",
+                "created": "2020-08-20T14:41:33.568695",
+                "proofValue": "zMcm4LfQFUZkWZxsxWPgp6DrdPpgMgyrt1HpiRRwiBDd8i2JMeL9AszeDjjVyMWzwYf8UQZFLQkRWZGpQxB8GXtUpH1MEQcLLCTuomFN4t8bChA7GDJAVV5DcNLuKQrHbSg2zrfL5ytLgne1b15U58Vs7qnSTRTYcQ9XeiJbbm5rQ1XhPdHXsrsE2NTxT18w8NGNjHoyALoVyVKRz4gwbH7R8ftAa4S2g3oVuTXc9FQkHAfYER5BuMAYDnEGysQWTkK8aE7eJKhchrsLazBj9Qb2wLo5QN4yyfCkcVJkapNcjCooPiH",
+                "proofPurpose": "assertionMethod",
+                "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
+              }
+            },
+            "expected": "Error",
+            "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
+          }
+        }
+      ]
+    }
+  ],
+  "pending": [
+    {
+      "fullTitle": "@context MUST be one or more URIs",
+      "title": "MUST be one or more URIs",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "@context MUST be one or more URIs (negative)",
+      "title": "MUST be one or more URIs (negative)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "@context first value MUST be https://www.w3.org/2018/credentials/v1",
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "@context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "@context subsequent items can be objects that express context information",
+      "title": "subsequent items can be objects that express context information",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`id` properties MUST be a single URI",
+      "title": "MUST be a single URI",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`id` properties MUST be a single URI (negative)",
+      "title": "MUST be a single URI (negative)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`type` properties MUST be one or more URIs",
+      "title": "MUST be one or more URIs",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`type` properties MUST be one or more URIs (negative)",
+      "title": "MUST be one or more URIs (negative)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`type` properties for Credential MUST be `VerifiableCredential` plus specific type",
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`credentialSubject` property MUST be present",
+      "title": "MUST be present",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`credentialSubject` property MUST be present, may be a set of objects",
+      "title": "MUST be present, may be a set of objects",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`credentialSubject` property MUST be present (negative - credentialSubject missing)",
+      "title": "MUST be present (negative - credentialSubject missing)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`issuer` property MUST be present",
+      "title": "MUST be present",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`issuer` property MUST be present (negative - missing issuer)",
+      "title": "MUST be present (negative - missing issuer)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`issuer` property MUST be a single URI",
+      "title": "MUST be a single URI",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`issuer` property MUST be a single URI (negative - not URI)",
+      "title": "MUST be a single URI (negative - not URI)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`issuer` property MUST be a single URI (negative - Array)",
+      "title": "MUST be a single URI (negative - Array)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`issuanceDate` property MUST be present",
+      "title": "MUST be present",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`issuanceDate` property MUST be present (negative - missing issuanceDate)",
+      "title": "MUST be present (negative - missing issuanceDate)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`issuanceDate` property MUST be an RFC3339 datetime",
+      "title": "MUST be an RFC3339 datetime",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`expirationDate` property MUST be an RFC3339 datetime",
+      "title": "MUST be an RFC3339 datetime",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "Presentations MUST be of type `VerifiablePresentation`",
+      "title": "MUST be of type `VerifiablePresentation`",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "Presentations MUST include `verifiableCredential` and `proof`",
+      "title": "MUST include `verifiableCredential` and `proof`",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
+      "title": "`credentialSchema` MUST provide one or more data schemas",
+      "result": "pending",
+      "err": {}
+    },
+    {
+      "fullTitle": "each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+      "title": "MUST specify a `type` property with a valid value",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "each object within `credentialSchema`... MUST specify an `id` property",
+      "title": "MUST specify an `id` property",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
+      "title": "`refreshService` MUST provide one or more refresh services",
+      "result": "pending",
+      "err": {}
+    },
+    {
+      "fullTitle": "each object within `refreshService`... MUST specify a `type` property with a valid value",
+      "title": "MUST specify a `type` property with a valid value",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "each object within `refreshService`... MUST specify an `id` property",
+      "title": "MUST specify an `id` property",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
+      "title": "value of `id` MUST be a URL identifying a service endpoint",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
+      "title": "`evidence` MUST provide one or more evidence objects",
+      "result": "pending",
+      "err": {}
+    },
+    {
+      "fullTitle": "each object within `evidence`... MUST specify a `type` property with a valid value",
+      "title": "MUST specify a `type` property with a valid value",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`credentialStatus` property MUST include `id` and `type`",
+      "title": "MUST include `id` and `type`",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
+      "title": "MUST include `id` and `type` (negative - missing `id`)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
+      "title": "MUST include `id` and `type` (negative - missing `type`)",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
+      "title": "`termsOfUse` MUST provide one or more ToU objects",
+      "result": "pending",
+      "err": {}
+    },
+    {
+      "fullTitle": "each object within `termsOfUse`... MUST specify a `type` property with a valid value",
+      "title": "MUST specify a `type` property with a valid value",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "`proof` property MUST be present",
+      "title": "MUST be present",
+      "result": "pending",
+      "err": {}
+    },
+    {
+      "fullTitle": "`proof` property MUST include specific method using the type property",
+      "title": "MUST include specific method using the type property",
+      "result": "pending",
+      "err": {}
+    },
+    {
+      "fullTitle": "`proof` property MUST include type property (negative - missing proof type)",
+      "title": "MUST include type property (negative - missing proof type)",
+      "result": "pending",
+      "err": {}
+    },
+    {
+      "fullTitle": "A verifiable credential ... vc MUST be present in a JWT verifiable credential.",
+      "title": "vc MUST be present in a JWT verifiable credential.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
+      "title": "If no explicit rule is specified, properties are encoded in the same way as with a standardverifiable credential, and are added to the vc property of the JWT.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... if typ is present, it MUST be set to JWT.",
+      "title": "if typ is present, it MUST be set to JWT.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... alg MUST be used for RSA and ECDSA-based digital signatures.",
+      "title": "alg MUST be used for RSA and ECDSA-based digital signatures.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If no JWS is present, a proof property MUST be provided.",
+      "title": "If no JWS is present, a proof property MUST be provided.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... If only the proof attribute is used, the alg header MUST be set to none.",
+      "title": "If only the proof attribute is used, the alg header MUST be set to none.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
+      "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate).",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
+      "title": "exp MUST represent expirationDate, encoded as a UNIX timestamp (NumericDate) -- negative, no exp expected.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... iss MUST represent the issuer property.",
+      "title": "iss MUST represent the issuer property.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
+      "title": "nbf MUST represent issuanceDate, encoded as a UNIX timestamp (NumericDate).",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential.",
+      "title": "jti MUST represent the id property of the verifiable credential.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
+      "title": "jti MUST represent the id property of the verifiable credential -- negative, no jti expected",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... sub MUST represent the id property contained in the verifiable credential subject.",
+      "title": "sub MUST represent the id property contained in the verifiable credential subject.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To encode a verifiable credential as a JWT, specific properties introduced by thisspecification MUST be either 1) encoded as standard JOSE header parameters, 2) encoded as registered JWT claim names, or 3) contained in the JWS signature part... Additional claims MUST be added to the credentialSubject property of the JWT.",
+      "title": "Additional claims MUST be added to the credentialSubject property of the JWT.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To decode a JWT to a standard verifiable credential, the following transformation MUST be performed... Add the content from the vc property to the new JSON object.",
+      "title": "Add the content from the vc property to the new JSON object.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To transform the JWT specific headers and claims, the following MUST be done: If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
+      "title": "If exp is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the expirationDate property of credentialSubject of the new JSON object.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To transform the JWT specific headers and claims, the following MUST be done: If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
+      "title": "If iss is present, the value MUST be used to set the issuer property of the new JSON object.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To transform the JWT specific headers and claims, the following MUST be done: If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
+      "title": "If nbf is present, the UNIX timestamp MUST be converted to an [RFC3339] date-time, and MUST be used to set the value of the issuanceDate property of the new JSON object.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To transform the JWT specific headers and claims, the following MUST be done: If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
+      "title": "If sub is present, the value MUST be used to set the value of the id property of credentialSubject of the new JSON object.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "To transform the JWT specific headers and claims, the following MUST be done: If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
+      "title": "If jti is present, the value MUST be used to set the value of the id property of the new JSON object.",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "A verifiable presentation ... vp MUST be present in a JWT verifiable presentation",
+      "title": "vp MUST be present in a JWT verifiable presentation",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "A verifiable presentation ... aud MUST represent the subject of the consumer of the verifiable presentation",
+      "title": "aud MUST represent the subject of the consumer of the verifiable presentation",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation",
+      "title": "jti MUST represent the id property of [...] the verifiable presentation",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "A verifiable presentation ... jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
+      "title": "jti MUST represent the id property of [...] the verifiable presentation -- negative, no jti expected",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation",
+      "title": "iss MUST represent [...] the holder property of a verifiable presentation",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "A verifiable presentation ... iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
+      "title": "iss MUST represent [...] the holder property of a verifiable presentation. -- negative, no jti expected",
+      "result": "unknown",
+      "err": {}
+    },
+    {
+      "fullTitle": "A verifiable presentation... MUST NOT leak information",
+      "title": "MUST NOT leak information",
+      "result": "pending",
+      "err": {}
+    }
+  ],
+  "failures": [
+    {
+      "fullTitle": "A verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "duration": 3869,
+      "result": "failed",
+      "err": {
+        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
+        "showDiff": true,
+        "actual": {
+          "@context": [
+            "https://www.w3.org/2018/credentials/v1",
+            "https://www.w3.org/2018/credentials/examples/v1"
+          ],
+          "type": [
+            "VerifiableCredential",
+            "UniversityDegreeCredential"
+          ],
+          "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+          "issuanceDate": "2010-01-01T19:23:24Z",
+          "credentialSubject": {
+            "givenName": "Jane",
+            "familyName": "Doe",
+            "degree": {
+              "type": "BachelorDegree",
+              "name": "Bachelor of Science in Mechanical Engineering",
+              "college": "College of Engineering"
+            }
+          },
+          "proof": {
+            "type": "MerkleProof2019",
+            "created": "2020-08-20T14:40:53.757841",
+            "proofValue": "zMcm4LfQFUZkWZyN6A3aNFvufMEDPLiBrDKE6gkQ9K6dfK5BRguDxSnGs1CTjneu4kZgvwKMBE8VAavkChzoDt2bMWPCjrNMcUJhh8KeGcVGgf4GifUTuUL1QWaPDUfpkkuxpwYCgCF6iFc2FJEGLpdvBqp8GDww53JwTguQpStC9riNvauXFANSo2HWCCsgv82cr8E9p4ijtEiv5PJTNW5w9n7mu7fqjBAQGmdLKYS3f3gTzJ36GMfzcF1Yj2RbTWMQhXernGUNknt6SgJMk1Gj2SvBiMR8DX4qNZn7AfSyPpuiKYY",
+            "proofPurpose": "assertionMethod",
+            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
+          }
+        },
+        "expected": "Error",
+        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
+      }
+    },
+    {
+      "fullTitle": "A verifiable credential... MUST contain a proof (negative - missing)",
+      "title": "MUST contain a proof (negative - missing)",
+      "duration": 3798,
+      "result": "failed",
+      "err": {
+        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
+        "showDiff": true,
+        "actual": {
+          "@context": [
+            "https://www.w3.org/2018/credentials/v1",
+            "https://www.w3.org/2018/credentials/examples/v1"
+          ],
+          "type": [
+            "VerifiableCredential",
+            "UniversityDegreeCredential"
+          ],
+          "credentialSchema": {
+            "id": "did:example:cdf:35LB7w9ueWbagPL94T9bMLtyXDj9pX5o",
+            "type": "did:example:schema:22KpkXgecryx9k7N6XN1QoN3gXwBkSU8SfyyYQG"
+          },
+          "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+          "issuanceDate": "2010-01-01T19:23:24Z",
+          "credentialSubject": {
+            "givenName": "Jane",
+            "familyName": "Doe",
+            "degree": {
+              "type": "BachelorDegree",
+              "name": "Bachelor of Science in Mechanical Engineering",
+              "college": "College of Engineering"
+            }
+          },
+          "proof": {
+            "type": "MerkleProof2019",
+            "created": "2020-08-20T14:41:01.416152",
+            "proofValue": "zMcm4LfQFUZkWZxqSy4UiHK788pxmE6Ha9s6bU387XfDLisCqPGfkUNtAsxr3q19t2WZLoAJ7dLDSGEpuLoeTwPVe6dGjf3AhfRWehsn3JKaEH2dJry4hpXoRdAkU9xhZq3BipP8NWfw1Yix9nZLYPrgMHSnFKzezpKUc4wHJXU6qMHUGEdQcr2GZ7qpFjE78e8GE3rYBVELL5mVEEQXxYG6DwVqKU7MqDXZWhi5cpQiGXKNjDcdf9soz15GH1E4ZakjNe4rYsiQFebZNB74aRgRJe63CPnZStLCdvndBfcKuYGLDeC",
+            "proofPurpose": "assertionMethod",
+            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
+          }
+        },
+        "expected": "Error",
+        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
+      }
+    },
+    {
+      "fullTitle": "Each credentialSchema... MUST specify a type (negative - type missing)",
+      "title": "MUST specify a type (negative - type missing)",
+      "duration": 4040,
+      "result": "failed",
+      "err": {
+        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
+        "showDiff": true,
+        "actual": {
+          "@context": [
+            "https://www.w3.org/2018/credentials/v1",
+            "https://www.w3.org/2018/credentials/examples/v1"
+          ],
+          "type": [
+            "VerifiableCredential",
+            "UniversityDegreeCredential"
+          ],
+          "credentialSchema": {
+            "id": "did:example:cdf:35LB7w9ueWbagPL94T9bMLtyXDj9pX5o"
+          },
+          "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+          "issuanceDate": "2010-01-01T19:23:24Z",
+          "credentialSubject": {
+            "givenName": "Jane",
+            "familyName": "Doe",
+            "degree": {
+              "type": "BachelorDegree",
+              "name": "Bachelor of Science in Mechanical Engineering",
+              "college": "College of Engineering"
+            }
+          },
+          "proof": {
+            "type": "MerkleProof2019",
+            "created": "2020-08-20T14:41:09.220380",
+            "proofValue": "zMcm4LfQFUZkWZxsqZqtVshK3gbSNbEGGPZURmq5McfYRfCJSLRpYeHvo1668QAF7jUCJP5uzJMzf6v1XDJaamTyNMMFrTVdWVpqq8QoK6RxioJr4dDVqygjzCgtRe4uMKeGVUbC7y8LqNqjxc46jD55EsHPtkjziJmPPttKy8Qa8SasLxMg7k1JgQfwrssicCXfGjZWjyfxPakwVFErFk5LZtTvz8zmfgqt6v4xsWuSWepdHBhynhrw1HnWvSUfcccWFZJBLuKu6nQvPxnYJsUywFoCnnPEcsNENxZU43KmG5QC4BV",
+            "proofPurpose": "assertionMethod",
+            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
+          }
+        },
+        "expected": "Error",
+        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
+      }
+    },
+    {
+      "fullTitle": "Each credentialSchema... MUST specify an `id` property (negative - `id` missing)",
+      "title": "MUST specify an `id` property (negative - `id` missing)",
+      "duration": 3798,
+      "result": "failed",
+      "err": {
+        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
+        "showDiff": true,
+        "actual": {
+          "@context": [
+            "https://www.w3.org/2018/credentials/v1",
+            "https://www.w3.org/2018/credentials/examples/v1"
+          ],
+          "type": [
+            "VerifiableCredential",
+            "UniversityDegreeCredential"
+          ],
+          "credentialSchema": {
+            "type": "did:example:schema:22KpkXgecryx9k7N6XN1QoN3gXwBkSU8SfyyYQG"
+          },
+          "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+          "issuanceDate": "2010-01-01T19:23:24Z",
+          "credentialSubject": {
+            "givenName": "Jane",
+            "familyName": "Doe",
+            "degree": {
+              "type": "BachelorDegree",
+              "name": "Bachelor of Science in Mechanical Engineering",
+              "college": "College of Engineering"
+            }
+          },
+          "proof": {
+            "type": "MerkleProof2019",
+            "created": "2020-08-20T14:41:16.809526",
+            "proofValue": "zMcm4LfQFUZkWZyMZReNHq6LjLBdRcfj5shFa9jWjJLdqJ2MFnkioMeb5LgJX7EWyQF9YD4EhKfUCuQnnj9HFb2QcoWjR3LowtJS8gvqnGkJf347xbi2u3bD55sT8rogUDBvjKwW2X16FgQNGcycNBCwXujnookXF86BmwJZQCPC68k3mcsQYB99KPgwWFffvKRb2RcN7QJDCKAcCi1EF3owHgCWW8wiXBVxbdM2V4hxAoNfbWxkBxcwryDweruVweqkaKdKE9Em4ChTb3QAXq1bMB5NDmMrPmWQzVgn7ud5HNYu4W3",
+            "proofPurpose": "assertionMethod",
+            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
+          }
+        },
+        "expected": "Error",
+        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
+      }
+    },
+    {
+      "fullTitle": "Each proof... proof MUST include type property (negative - missing proof type)",
+      "title": "proof MUST include type property (negative - missing proof type)",
+      "duration": 3615,
+      "result": "failed",
+      "err": {
+        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
+        "showDiff": true,
+        "actual": {
+          "@context": [
+            "https://www.w3.org/2018/credentials/v1",
+            "https://www.w3.org/2018/credentials/examples/v1"
+          ],
+          "type": [
+            "VerifiableCredential",
+            "UniversityDegreeCredential"
+          ],
+          "credentialSchema": {
+            "id": "did:example:cdf:35LB7w9ueWbagPL94T9bMLtyXDj9pX5o",
+            "type": "did:example:schema:22KpkXgecryx9k7N6XN1QoN3gXwBkSU8SfyyYQG"
+          },
+          "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+          "issuanceDate": "2010-01-01T19:23:24Z",
+          "credentialSubject": {
+            "givenName": "Jane",
+            "familyName": "Doe",
+            "degree": {
+              "type": "BachelorDegree",
+              "name": "Bachelor of Science in Mechanical Engineering",
+              "college": "College of Engineering"
+            }
+          },
+          "proof": {
+            "type": "MerkleProof2019",
+            "created": "2020-08-20T14:41:29.314715",
+            "proofValue": "zMcm4LfQFUZkWZyN58t7RHbNUPEZ3JAaKS4Lj7STkyuXSQW8pVfoZnWzFU4nbLMjVFPeiKbZEV2zMWeQ7b1Ue7gAdPmbzQUwwtBHLayGZrArRzqh1qafeqqf5kgmTgkQ8vKsZeSPsnRkkrr3n6XQAG5gjkgJ973eMcbx8srRiqDDfunrmmJKV7omKur3vrCJUNVchC8gSHqrqjkkCMkHiB6EycTd2X7w89dVbpRU2tNkB64a6qMc9Jp1u1B7QRDpKzr9yuo7oyGxfwLEvhVPmckMkjjyarhzKzHAhb5sRddoc2YB9F7",
+            "proofPurpose": "assertionMethod",
+            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
+          }
+        },
+        "expected": "Error",
+        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
+      }
+    },
+    {
+      "fullTitle": "A verifiable presentation... MUST be of type `VerifiablePresentation`",
+      "title": "MUST be of type `VerifiablePresentation`",
+      "duration": 7,
+      "result": "failed",
+      "err": {
+        "stack": "Error: Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n\n    at ChildProcess.exithandler (child_process.js:299:12)\n    at maybeClose (internal/child_process.js:999:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:266:5)",
+        "message": "Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n",
+        "killed": false,
+        "code": 126,
+        "signal": null,
+        "cmd": "  /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld",
+        "stdout": "",
+        "stderr": "/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n"
+      }
+    },
+    {
+      "fullTitle": "A verifiable presentation... MUST include `verifiableCredential`",
+      "title": "MUST include `verifiableCredential`",
+      "duration": 7,
+      "result": "failed",
+      "err": {
+        "stack": "Error: Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n\n    at ChildProcess.exithandler (child_process.js:299:12)\n    at maybeClose (internal/child_process.js:999:16)\n    at Socket.stream.socket.on (internal/child_process.js:403:11)\n    at Pipe._handle.close (net.js:614:12)",
+        "message": "Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n",
+        "killed": false,
+        "code": 126,
+        "signal": null,
+        "cmd": "  /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld",
+        "stdout": "",
+        "stderr": "/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n"
+      }
+    },
+    {
+      "fullTitle": "A verifiable presentation... MUST include `proof`",
+      "title": "MUST include `proof`",
+      "duration": 7,
+      "result": "failed",
+      "err": {
+        "stack": "Error: Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n\n    at ChildProcess.exithandler (child_process.js:299:12)\n    at maybeClose (internal/child_process.js:999:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:266:5)",
+        "message": "Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n",
+        "killed": false,
+        "code": 126,
+        "signal": null,
+        "cmd": "  /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld",
+        "stdout": "",
+        "stderr": "/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n"
+      }
+    },
+    {
+      "fullTitle": "Each verifiable credential... MUST have a `credentialSchema` member",
+      "title": "MUST have a `credentialSchema` member",
+      "duration": 15,
+      "result": "failed",
+      "err": {
+        "stack": "Error: Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n\n    at ChildProcess.exithandler (child_process.js:299:12)\n    at maybeClose (internal/child_process.js:999:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:266:5)",
+        "message": "Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n",
+        "killed": false,
+        "code": 126,
+        "signal": null,
+        "cmd": "  /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld",
+        "stdout": "",
+        "stderr": "/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-015-zkp-vp.jsonld: Permission denied\n"
+      }
+    },
+    {
+      "fullTitle": "Each verifiable credential... MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "title": "MUST contain a credentialSchema (negative - credentialSchema missing)",
+      "duration": 4178,
+      "result": "failed",
+      "err": {
+        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }",
+        "showDiff": true,
+        "actual": {
+          "@context": [
+            "https://www.w3.org/2018/credentials/v1",
+            "https://www.w3.org/2018/credentials/examples/v1"
+          ],
+          "type": "VerifiablePresentation",
+          "verifiableCredential": {
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "https://www.w3.org/2018/credentials/examples/v1"
+            ],
+            "type": [
+              "VerifiableCredential",
+              "UniversityDegreeCredential"
+            ],
+            "issuer": "did:example:Wz4eUg7SetGfaUVCn8U9d62oDYrUJLuUtcy619",
+            "issuanceDate": "2010-01-01T19:23:24Z",
+            "credentialSubject": {
+              "degreeType": "BachelorDegree",
+              "degreeSchool": "College of Engineering"
+            },
+            "proof": {
+              "type": "ex:AnonCredDerivedCredentialv1",
+              "primaryProof": "cg7wLNSi48K5qNyAVMwdYqVHSMv1Ur8i...Fg2ZvWF6zGvcSAsym2sgSk737",
+              "nonRevocationProof": "mu6fg24MfJPU1HvSXsf3ybzKARib4WxG...RSce53M6UwQCxYshCuS3d2h"
+            }
+          },
+          "proof": {
+            "type": "MerkleProof2019",
+            "created": "2020-08-20T14:41:33.568695",
+            "proofValue": "zMcm4LfQFUZkWZxsxWPgp6DrdPpgMgyrt1HpiRRwiBDd8i2JMeL9AszeDjjVyMWzwYf8UQZFLQkRWZGpQxB8GXtUpH1MEQcLLCTuomFN4t8bChA7GDJAVV5DcNLuKQrHbSg2zrfL5ytLgne1b15U58Vs7qnSTRTYcQ9XeiJbbm5rQ1XhPdHXsrsE2NTxT18w8NGNjHoyALoVyVKRz4gwbH7R8ftAa4S2g3oVuTXc9FQkHAfYER5BuMAYDnEGysQWTkK8aE7eJKhchrsLazBj9Qb2wLo5QN4yyfCkcVJkapNcjCooPiH",
+            "proofPurpose": "assertionMethod",
+            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
+          }
+        },
+        "expected": "Error",
+        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, type, ...) }"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "fullTitle": "A verifiable credential... MUST contain a credentialSchema",
+      "title": "MUST contain a credentialSchema",
+      "duration": 3552,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "A verifiable credential... MUST contain a proof",
+      "title": "MUST contain a proof",
+      "duration": 3866,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Each credentialSchema... MUST specify a type",
+      "title": "MUST specify a type",
+      "duration": 3756,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Each credentialSchema... MUST specify an `id` property",
+      "title": "MUST specify an `id` property",
+      "duration": 3798,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Each credentialSchema... value of `id` MUST be a URI identifying a schema file",
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "duration": 5279,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Each proof... MUST include specific method using the type property",
+      "title": "MUST include specific method using the type property",
+      "duration": 3620,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "A verifiable presentation... MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "title": "MUST include `verifiableCredential` (negative - missing `verifiableCredential`)",
+      "duration": 8,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "A verifiable presentation... MUST include `proof` (negative - missing `proof`)",
+      "title": "MUST include `proof` (negative - missing `proof`)",
+      "duration": 8,
+      "result": "passed",
+      "err": {}
+    }
+  ]
+}
