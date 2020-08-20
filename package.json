@@ -12,7 +12,7 @@
     "mocha-spec-json-output-reporter": "^1.1.7"
   },
   "scripts": {
-    "report": "mocha --recursive test/vc-data-model-1.0/ -R mocha-spec-json-output-reporter --reporter-options fileName=report-status.json",
+    "report": "mocha --recursive test/vc-data-model-1.0/ -R mocha-spec-json-output-reporter --reporter-options fileName=report-zkp.json,hierarchy=true",
     "summary": "cd implementations && node generate.js",
     "test": "mocha --recursive test/vc-data-model-1.0/"
   },
