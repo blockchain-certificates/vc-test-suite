@@ -7,6 +7,27 @@ const util = require('util');
 
 const exec = util.promisify(require('child_process').exec);
 
+async function batchDocuments (files = [], options = {}) {
+  const filePaths = files.map(file => path.join(__dirname, 'input', file));
+  console.log('Prepared for batch', filePaths);
+  console.log('execute command', options.generator + ' ' +
+    options.generatorOptions + ' ' + filePaths);
+  const {stdout, stderr} = await exec(options.generator + ' ' +
+    options.generatorOptions + ' ' + filePaths);
+
+  // console.log('Resolved signed documents', stdout);
+
+  if(stderr) {
+    throw new Error(stderr);
+  }
+
+  const output = JSON.parse(stdout);
+  return files.reduce((returnObject, fileName, index) => {
+    returnObject[fileName] = output[index];
+    return returnObject;
+  }, {})
+}
+
 async function generate(file, options) {
   options = options || {};
   const {stdout, stderr} = await exec(options.generator + ' ' +
@@ -79,6 +100,7 @@ const RFC3339regex = new RegExp('^(\\d{4})-(0[1-9]|1[0-2])-' +
   '([0-5][0-9]))$', 'i');
 
 module.exports = {
+  batchDocuments,
   generate,
   generatePresentation,
   generateJwt,
