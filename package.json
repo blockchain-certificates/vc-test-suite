@@ -3,7 +3,8 @@
   "version": "0.3.0",
   "description": "Verifiable Credentials Test Suite",
   "dependencies": {
-    "@decentralized-identity/did-auth-jose": "^0.1.13"
+    "@decentralized-identity/did-auth-jose": "^0.1.13",
+    "cert-issuer-node-wrapper": "github:blockchain-certificates/cert-issuer-node-wrapper"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -14,7 +15,9 @@
   "scripts": {
     "report": "mocha --recursive test/vc-data-model-1.0/ -R mocha-spec-json-output-reporter --reporter-options fileName=report-zkp.json,hierarchy=true",
     "summary": "cd implementations && node generate.js",
-    "test": "mocha --recursive test/vc-data-model-1.0/"
+    "test": "mocha --recursive test/vc-data-model-1.0/",
+    "start:issuer": "blockcerts-issuer start &",
+    "stop:issuer": "blockcerts-issuer stop"
   },
   "repository": {
     "type": "git",
