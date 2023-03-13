@@ -12,6 +12,7 @@ spawn('npm', ['run start:issuer'], {
 
 console.log('cwd', process.cwd());
 console.log('issuer started, running tests');
+execSync('npm i -g mocha@6.1.4'); // TODO: read version from package.json
 execSync('npm run test', {
   cwd: path.join(__dirname, '../')
 });
