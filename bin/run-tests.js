@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-const { exec } = require('child_process');
+const { execSync } = require('child_process');
 
 console.log("starting issuer...");
-exec("npm run start:issuer");
+execSync("npm run start:issuer");
 console.log("issuer started, running tests");
-exec("npm run test");
+execSync("npm run test");
 console.log("tests have been run, stopping issuer");
-exec("npm run stop:issuer");
+execSync("npm run stop:issuer");
 console.log("vc test suite compliance run finished");
