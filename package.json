@@ -19,7 +19,9 @@
     "start:issuer": "blockcerts-issuer start &",
     "stop:issuer": "blockcerts-issuer stop"
   },
-  "bin": "./bin/run-tests.sh",
+  "bin": {
+    "vc-test-suite": "bin/run-tests.sh"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/w3c/vc-test-suite.git"
