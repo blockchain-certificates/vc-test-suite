@@ -7,9 +7,8 @@ const shelljs = require('shelljs');
 console.log('starting issuer...');
 console.log('cwd', process.cwd());
 console.log('dirname', __dirname);
-shelljs.exec('cd ..');
+shelljs.cd(path.join(__dirname, '..'));
 console.log('cwd', process.cwd());
-console.log('dirname', __dirname);
 shelljs.exec('npm run start:issuer');
 
 // execSync('npm run start:issuer', {
