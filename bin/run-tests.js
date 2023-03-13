@@ -3,7 +3,7 @@
 const { exec } = require('child_process');
 
 console.log('cwd', process.cwd());
-exec('sh ./bin/run-tests.sh', (error, stdout, stderr) => {
+exec(`sh ${__dirname}/run-tests.sh`, (error, stdout, stderr) => {
   if (error) {
     console.error(error);
   }
