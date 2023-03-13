@@ -2,7 +2,7 @@
  * Copyright (c) 2019 Digital Bazaar, Inc. All rights reserved.
  */
 /*global describe, it*/
-const config = require('../../config.json');
+const config = require('../../config.js');
 const chai = require('chai');
 const {expect} = chai;
 const util = require('./util');

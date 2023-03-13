@@ -2,7 +2,7 @@
  * Copyright (c) 2019 Digital Bazaar, Inc. All rights reserved.
  */
 /*global describe, it*/
-const config = require('../../config.json');
+const config = require('../../config.js');
 const chai = require('chai');
 const {expect} = chai;
 const util = require('./util');
@@ -294,7 +294,7 @@ describe('JWT (optional)', function() {
     });
   });
 
-  describe('A verifiable presentation ...', function() {    
+  describe('A verifiable presentation ...', function() {
 
     it('vp MUST be present in a JWT verifiable presentation', async function() {
       const jwtBase64 = await util.generatePresentationJwt('example-016-jwt-presentation.jsonld', getGeneratorOptions(OPTIONS.JWT_PRESENTATION));
@@ -305,7 +305,7 @@ describe('JWT (optional)', function() {
       expect(payload.vp !== null && payload.vp !== undefined).to.be.true;
       expect(payload.vp.type !== null && payload.vp !== undefined).to.be.true;
       expect(payload.vp.verifiableCredential !== null && payload.vp !== undefined).to.be.true;
-    });    
+    });
 
     it('aud MUST represent the subject of the consumer of the verifiable presentation', async function() {
       const jwtBase64 = await util.generatePresentationJwt('example-016-jwt-presentation.jsonld', getGeneratorOptions(OPTIONS.JWT_PRESENTATION));
@@ -335,7 +335,7 @@ describe('JWT (optional)', function() {
       const payload = JSON.parse(jwtResult.getPayload());
       expect(payload.jti === null || typeof payload.jti === 'undefined').to.be.true;
     });
-        
+
     it('iss MUST represent [...] the holder property of a verifiable presentation', async function() {
       const jwtBase64 = await util.generatePresentationJwt('example-016-jwt-presentation.jsonld', getGeneratorOptions(OPTIONS.JWT_PRESENTATION));
       const jwtResult = cryptoFactory.constructJws(jwtBase64);
