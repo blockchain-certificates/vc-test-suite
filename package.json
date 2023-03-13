@@ -20,7 +20,7 @@
     "stop:issuer": "blockcerts-issuer stop"
   },
   "bin": {
-    "vc-test-suite": "bin/run-tests.sh"
+    "vc-test-suite": "bin/run-tests.js"
   },
   "repository": {
     "type": "git",
