@@ -6,7 +6,7 @@ const shelljs = require('shelljs');
 
 console.log('starting issuer...');
 shelljs.cd(path.join(__dirname, '..'));
-fork('npm run start:issuer', {
+fork('npm', ['run start:issuer'], {
   cwd: path.join(__dirname, '..')
 }); // https://github.com/shelljs/shelljs/issues/426
 
