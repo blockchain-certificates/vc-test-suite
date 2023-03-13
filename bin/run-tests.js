@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
+const { fork } = require('child_process');
 const path = require('path');
 const shelljs = require('shelljs');
 
 console.log('starting issuer...');
 shelljs.cd(path.join(__dirname, '..'));
-shelljs.exec('npm run start:issuer');
+fork('npm run start:issuer'); // https://github.com/shelljs/shelljs/issues/426
 
 console.log('cwd', process.cwd());
 console.log('issuer started, running tests');
