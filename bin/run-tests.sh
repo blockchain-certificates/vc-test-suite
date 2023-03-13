@@ -1,5 +1,6 @@
 #!/usr/bin/env
 
+pwd
 echo "starting issuer..."
 npm run start:issuer
 echo "issuer started, running tests"
