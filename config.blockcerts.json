@@ -1,7 +1,7 @@
 {
   "generator":"node node_modules/cert-issuer-node-wrapper/callIssue ",
   "presentationGenerator":"node node_modules/cert-issuer-node-wrapper/callIssue ",
-  "generatorOptions":"--issuer_path ../cert-issuer --files",
+  "generatorOptions":"--files",
   "sectionsNotSupported": [ "schema", "refresh", "evidence", "status", "tou", "ldp", "jwt", "zkp"],
 
   "jwt":{
