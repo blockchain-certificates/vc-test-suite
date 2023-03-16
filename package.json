@@ -11,7 +11,7 @@
     "mocha-spec-json-output-reporter": "^1.1.7"
   },
   "scripts": {
-    "postinstall": "npx mkdirp ./node_modules && cp -r ../cert-issuer-node-wrapper ./node_modules/cert-issuer-node-wrapper",
+    "postinstall": "mkdir node_modules/vc-test-suite/node_modules && cp -r node_modules/cert-issuer-node-wrapper node_modules/vc-test-suite/node_modules/cert-issuer-node-wrapper",
     "report": "mocha --recursive test/vc-data-model-1.0/ -R mocha-spec-json-output-reporter --reporter-options fileName=report-basic.json,hierarchy=true",
     "summary": "node implementations/generate.js",
     "summary:blockcerts": "node implementations/generate.js --implementer blockcerts",
