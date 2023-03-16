@@ -11,661 +11,6 @@
   },
   "tests": [
     {
-      "fullTitle": "Basic Documents @context MUST be one or more URIs",
-      "title": "MUST be one or more URIs",
-      "duration": 4155,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
-      "title": "MUST be one or more URIs (negative)",
-      "duration": 2616,
-      "result": "failed",
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1"
-          ],
-          "id": "http://example.edu/credentials/58473",
-          "type": [
-            "VerifiableCredential",
-            "AlumniCredential"
-          ],
-          "issuer": "https://example.edu/issuers/14",
-          "issuanceDate": "2010-01-01T19:23:24Z",
-          "credentialSubject": {
-            "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-            "alumniOf": "Example University"
-          },
-          "proof": {
-            "type": "MerkleProof2019",
-            "created": "2020-08-20T14:08:00.801497",
-            "proofValue": "zMcm4LfQFUZkWZyMZbUSCAQ8mBNkpSxAGvFKRYkvjjxPbX2H2qvKGQjXpRqmtxfpf3Lp8h5iKrYCTYugL18oDQvzApLhbHTP3V2tzRbNqv62VAC1tgXDhKYNTdpcbiEKb8UNYJ2GYgfueDhefx5WPkBPeeeowkPNbDqfC6KDPMD2Zxv54kHuSbL5KB82NDnJczjiXwiTDfXmmU585Ey79xvQQWvMf15cMdmnSjhAFt5iY8SnaTa6AqQ7FvrcWJqkYUz1KqcgLEYgUwKED315qwyU5e8fP1Xy8gJ1XgcYGPwc888KNep",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
-          }
-        },
-        "expected": "Error",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
-      "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
-      "duration": 3579,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "duration": 1657,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
-      "title": "subsequent items can be objects that express context information",
-      "duration": 3668,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents `id` properties MUST be a single URI",
-      "title": "MUST be a single URI",
-      "duration": 3585,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
-      "title": "MUST be a single URI (negative)",
-      "duration": 1650,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
-      "title": "MUST be one or more URIs",
-      "duration": 3400,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
-      "title": "MUST be one or more URIs (negative)",
-      "duration": 3764,
-      "result": "failed",
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "http://example.edu/credentials/3732",
-          "type": "VerifiableCredential",
-          "issuer": "https://example.edu/issuers/14",
-          "issuanceDate": "2010-01-01T19:23:24Z",
-          "credentialSubject": {
-            "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-            "degree": {
-              "type": "BachelorDegree",
-              "name": "Bachelor of Science in Mechanical Engineering"
-            }
-          },
-          "proof": {
-            "type": "MerkleProof2019",
-            "created": "2020-08-20T14:08:22.101233",
-            "proofValue": "zMcm4LfQFUZkWZxp5WBn8mvqs68WrxRQmbfBFN4U3zTu7NCKhtueEXZL3EojwCxw6c6z9mjRUS3JaUus5F1oJzceHN9GW5R68JEvNFpXAFjQVFnq8QUri3xfVLrDgUMjQAHLwRFH3YV9bG6yS7JnVZRBzrEGXYxDHqJ1XmspQbncTqEMMBJRzCXEJMrbw81CxJpZQnGRVqXtXruKZ4GY6k4aPQybz5i4Luw3Etcb1BMhLYEE8hUQ8YRBPbA7vnwZRwompUgYC3j9QJ5sUypo22ZCHtrfP4E7DYCqeiFS2La8QAJa8ZJ",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
-          }
-        },
-        "expected": "Error",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
-      "title": "for Credential MUST be `VerifiableCredential` plus specific type",
-      "duration": 3268,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "duration": 3172,
-      "result": "failed",
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "http://example.edu/credentials/3732",
-          "type": [
-            "UniversityDegreeCredential"
-          ],
-          "issuer": "https://example.edu/issuers/14",
-          "issuanceDate": "2010-01-01T19:23:24Z",
-          "credentialSubject": {
-            "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-            "degree": {
-              "type": "BachelorDegree",
-              "name": "Bachelor of Science in Mechanical Engineering"
-            }
-          },
-          "proof": {
-            "type": "MerkleProof2019",
-            "created": "2020-08-20T14:08:28.552723",
-            "proofValue": "zMcm4LfQFUZkWZxrbBaGMDa1M26BtSqLZeQQhX6B4VpGkwARbcfMFsL2TatjAKiwCVE2vPLS4rN76k1FdEjETrqVxvJ3gocBkpqmGkJin1M2yesQ39RF2ZRJNtvnsXeQXftMMLfuVw7WdwqLegZkEsZ6sRRQUfqeBa3LRmird8hr8xa943EgHDtXrdb7rSPzT9BKfQPW5afoBK9rTXUCB9VQhmuiwP3S8Y8sPCQvK19f1afUK1gLkueMMUXoWxVru52SZEBUaTirBKJr5zNk1J1tAJEA5zxqpYR7UbSktxEETR7LZoY",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
-          }
-        },
-        "expected": "Error",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
-      "title": "MUST be present",
-      "duration": 3991,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
-      "title": "MUST be present, may be a set of objects",
-      "duration": 3485,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
-      "title": "MUST be present (negative - credentialSubject missing)",
-      "duration": 3169,
-      "result": "failed",
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "http://example.edu/credentials/58473",
-          "type": [
-            "VerifiableCredential",
-            "AlumniCredential"
-          ],
-          "issuer": "https://example.edu/issuers/14",
-          "issuanceDate": "2010-01-01T19:23:24Z",
-          "proof": {
-            "type": "MerkleProof2019",
-            "created": "2020-08-20T14:08:39.201100",
-            "proofValue": "zMcm4LfQFUZkWZyLJfoEQc7kLmCnp9NmkCAhhoGKDX5FQhjN8ubawWMUYJfCmN76fvkUz2HjN9Ab5mgxeS7XzLPjqYThv21MCmZNXdc4RVH5KzQrUeXeX7xrD39aqzfhgSMkD2je3gjRZCuRdmbzFBVi73QqWAe5685UtUM6mKMqmN5kXxehkuYNi9YJLpG5LCmVqdz6U3VuUAKDDL5Hx7bkcxHiWQEHCana4WSJV89munEKj1WCmFKW5JHKwnSX1E8mvGeFGF2LLgmcsDRDNCeTSWjYHkSaXKn2TAN4MNx2AZkZSwu",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
-          }
-        },
-        "expected": "Error",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents `issuer` property MUST be present",
-      "title": "MUST be present",
-      "duration": 3277,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
-      "title": "MUST be present (negative - missing issuer)",
-      "duration": 3071,
-      "result": "failed",
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "http://example.edu/credentials/3732",
-          "type": [
-            "VerifiableCredential",
-            "UniversityDegreeCredential"
-          ],
-          "issuanceDate": "2010-01-01T19:23:24Z",
-          "credentialSubject": {
-            "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-            "degree": {
-              "type": "BachelorDegree",
-              "name": "Bachelor of Science in Mechanical Engineering"
-            }
-          },
-          "proof": {
-            "type": "MerkleProof2019",
-            "created": "2020-08-20T14:08:45.550808",
-            "proofValue": "zMcm4LfQFUZkWZxrhijwLyECAuGHGwRa5Ms8KwJFW74ijnBTehGtyqRLRy3RuRtfHRKGD5k6uLvmnV6pxnPBG8oXse9W7oLe7q6xSDsnXcLUfVKX8qG7SBhFF55SbNDR2BWMkpFtshtyBh5Qm3Bvf4a3y9vE1wobRFxmmUEpszw2kajGEgCZPC1LwstwMMDkesQtvrsPK3poEoDfBSCGmP63RAXZdvQd8rCRUJFbNKQVjoJEJMmHMiLzU8DAN6nJCw6BML4yZ9kFnqCkosDgYdkU1E9CPmEKD5PbpuebbQ9JL5oemxg",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
-          }
-        },
-        "expected": "Error",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
-      "title": "MUST be a single URI",
-      "duration": 3323,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
-      "title": "MUST be a single URI (negative - not URI)",
-      "duration": 3637,
-      "result": "failed",
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "http://example.edu/credentials/3732",
-          "type": [
-            "VerifiableCredential",
-            "UniversityDegreeCredential"
-          ],
-          "issuer": "example",
-          "issuanceDate": "2010-01-01T19:23:24Z",
-          "credentialSubject": {
-            "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-            "degree": {
-              "type": "BachelorDegree",
-              "name": "Bachelor of Science in Mechanical Engineering"
-            }
-          },
-          "proof": {
-            "type": "MerkleProof2019",
-            "created": "2020-08-20T14:08:52.513236",
-            "proofValue": "zMcm4LfQFUZkWZxrhijwLyECAuGHGwRa5Ms8KwJFW74ijnBTehGtyqRLRy3RuRtfHRKGD5k6uLvmnV6pxnPBG8oXse9W7oLe7q6xSDsnXcLUfVKX8qG7SBhFF55SbNDR2BWMkpFtshtyBh5Qm3Bvf4a3y9vE1wobRFxmmUEpszw2kajGEgCZPC1LwstwMMDkesQtvrsPK3poEoDfBSCGmP63RAXZhQVdSjc3F1MSLS28rDXwFNtB7KFUzUViztbRewGgUJGTKEvGSsLzZVWyFsKXkCUD28ZDLZ3hfY7x8PKS1YfGCA7",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
-          }
-        },
-        "expected": "Error",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
-      "title": "MUST be a single URI (negative - Array)",
-      "duration": 3274,
-      "result": "failed",
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "http://example.edu/credentials/3732",
-          "type": [
-            "VerifiableCredential",
-            "UniversityDegreeCredential"
-          ],
-          "issuer": [
-            "https://example.edu/issuers/14",
-            "https://example.edu/issuers/20"
-          ],
-          "issuanceDate": "2010-01-01T19:23:24Z",
-          "credentialSubject": {
-            "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-            "degree": {
-              "type": "BachelorDegree",
-              "name": "Bachelor of Science in Mechanical Engineering"
-            }
-          },
-          "proof": {
-            "type": "MerkleProof2019",
-            "created": "2020-08-20T14:08:55.791445",
-            "proofValue": "zMcm4LfQFUZkWZyNpdi4ARh6SPZc8zdWM4oBjDVvqYTRzPPbDhn93k84p7daknbGkbJD9u3Ymzi8YyS9aAyKBTXyHh611DH78gcmhp65SBkweyxGZidcrwUsMdAsyWeujGsPTBQzvD9W1N4Dzg7KRXs8mhqFMreWaZNWGo9nvwqzr6g9y9rQYTNDzoL1jisaeT1pXGfLRX1uQU2hj2Nbpvjz71zkK93bj9fvrExGw1BmKiw4njeAoobGSfCBm9X9Pc9eKJi5kWMK5R8kwNYLmeJN7DYJNEqxNwW3ABDGSxT4qV6V5uj",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
-          }
-        },
-        "expected": "Error",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
-      "title": "MUST be present",
-      "duration": 3100,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
-      "title": "MUST be present (negative - missing issuanceDate)",
-      "duration": 30011,
-      "result": "failed",
-      "err": {
-        "stack": "Error: Timeout of 30000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/Users/julien/work/vc-test-suite/test/vc-data-model-1.0/10-basic.js)\n    at listOnTimeout (internal/timers.js:535:17)\n    at processTimers (internal/timers.js:479:7)",
-        "message": "Timeout of 30000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/Users/julien/work/vc-test-suite/test/vc-data-model-1.0/10-basic.js)"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
-      "title": "MUST be an RFC3339 datetime",
-      "duration": 7463,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 3651,
-      "result": "failed",
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "http://example.edu/credentials/3732",
-          "type": [
-            "VerifiableCredential",
-            "UniversityDegreeCredential"
-          ],
-          "issuer": "https://example.edu/issuers/14",
-          "issuanceDate": "01/01/2010",
-          "credentialSubject": {
-            "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-            "degree": {
-              "type": "BachelorDegree",
-              "name": "Bachelor of Science in Mechanical Engineering"
-            }
-          },
-          "proof": {
-            "type": "MerkleProof2019",
-            "created": "2020-08-20T14:09:40.023453",
-            "proofValue": "zMcm4LfQFUZkWZxsDaHbTZqhykfsne3vigM1zyuD7qbAUW1Txo3cZMxiNHb8231NzrkMAGyekfs6BdM7KBmzDqBmzFcT3Wd9zWHA8MqHF1o7Z6jD37uCehhLyUHaBUAqhvZirJddX3hDpvh3HS9JL9gsZJQ5AU9YzgkBZU6VUGwJMzpzJwTRGAdCZ2Eh27NJw2pvEav1H7cnbiu1YR21Xbe6JdGYgKo82QdQ56DzFtDrfRxDrySt5zgejcEtKpFXVEcSgC6DJb3v95KwPcj1XoS8BeS4fYENk8ZqqNH5YiuSaLJ1n77",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
-          }
-        },
-        "expected": "Error",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "title": "MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 3797,
-      "result": "failed",
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "http://example.edu/credentials/3732",
-          "type": [
-            "VerifiableCredential",
-            "UniversityDegreeCredential"
-          ],
-          "issuer": "https://example.edu/issuers/14",
-          "issuanceDate": [
-            "2010-01-01T19:23:24Z",
-            "2010-01-01T19:23:25Z"
-          ],
-          "credentialSubject": {
-            "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-            "degree": {
-              "type": "BachelorDegree",
-              "name": "Bachelor of Science in Mechanical Engineering"
-            }
-          },
-          "proof": {
-            "type": "MerkleProof2019",
-            "created": "2020-08-20T14:09:43.816113",
-            "proofValue": "zMcm4LfQFUZkWZyLpVmRz4zsqiaLc5mz54CEsSYvjt8Em2hrfedZrAGGP9GwtFzLVcfe21W9d69eVsNmkuiS2wJj8bwjhPDJJ2vjJGiVfyvkRgRZJ5pKLY9ZkdPeMXyTTWiJKV79RcSeECCcdcnzy2JoGF4CJeZHPLdfFCsJtVoSYCoFwiYbj7i8z4cgaQ23U8Va8DpN6Tn13rXQqDhwVDVsfnwe8KCscmYGL6kgfnbQjRQPd8vgEUCnYu4hF9XJu6E4Bc9vEgrB7CUzn1aNrPbYpUdWCGQTDiCzd4wXfgrwzKjQ2do",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
-          }
-        },
-        "expected": "Error",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
-      "title": "MUST be an RFC3339 datetime",
-      "duration": 3522,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 3338,
-      "result": "failed",
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "http://example.edu/credentials/3732",
-          "type": [
-            "VerifiableCredential",
-            "UniversityDegreeCredential"
-          ],
-          "issuer": "https://example.edu/issuers/14",
-          "issuanceDate": "2010-01-01T19:23:24Z",
-          "expirationDate": "01/01/2020",
-          "credentialSubject": {
-            "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-            "degree": {
-              "type": "BachelorDegree",
-              "name": "Bachelor of Science in Mechanical Engineering"
-            }
-          },
-          "proof": {
-            "type": "MerkleProof2019",
-            "created": "2020-08-20T14:09:50.677491",
-            "proofValue": "zMcm4LfQFUZkWZxp53scgS3i8C83CqfGzavELXqJqKXB9M7Q5JEpPf4UQSkVd3zJFZbBuEetW3EaYsDBkHMtEufM3aP8GFpQ6bnsaqdTysGaFPhAdoxdVD9u42xcdp7bmT4KsyD7xbpfmst2XvRi81F2ifCgVft4f5bh5qLktoxQ7aezErtKR3wsDPSAL2CHbkMD2tD5wmHz7ehhX3CtKMpBjzs4kCwk4WJTzHgr5FxmCVMP5Fjgybum3qw2jYZoJU2bM1tgKKrEquprkJTxSXs1Adz39Skr8HV3rEKDQJ83XCbJyAe",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
-          }
-        },
-        "expected": "Error",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "title": "MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 3481,
-      "result": "failed",
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "http://example.edu/credentials/3732",
-          "type": [
-            "VerifiableCredential",
-            "UniversityDegreeCredential"
-          ],
-          "issuer": "https://example.edu/issuers/14",
-          "issuanceDate": "2010-01-01T19:23:24Z",
-          "expirationDate": [
-            "2020-01-01T19:23:24Z",
-            "2021-01-01T19:23:24Z"
-          ],
-          "credentialSubject": {
-            "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-            "degree": {
-              "type": "BachelorDegree",
-              "name": "Bachelor of Science in Mechanical Engineering"
-            }
-          },
-          "proof": {
-            "type": "MerkleProof2019",
-            "created": "2020-08-20T14:09:54.158826",
-            "proofValue": "zMcm4LfQFUZkWZyLKEr886ymYZPRnYqXjMLXVDdtySczg1fELmqL5pZkYYRHFGMb8MtoPT6ry6QEbMs48qwzZ7gcrmQJJ3sEKbpKqqfpT3Hp5kJxZKQuiew5Y6gJS6zBnvRtmHL849axXGhRm6exM5aUMi7YLuZ6cBhEGuz96a8emYZQzrjYm9eYN13KvdDkLozotpkg4cgDmSeDG7gyyvxZcBYjkhC7ovhbFWQmMj9vYEQCm51s254rxdoc9ywEdXn9RUUjDycWr829PKnr95oDGDeCKmUgJHPxoEVaCu3CzL7Sw4A",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "ecdsa-koblitz-pubkey:0x7e30a37763e6Ba1fFeDE1750bBeFB4c60b17a1B3"
-          }
-        },
-        "expected": "Error",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
-      "title": "MUST be of type `VerifiablePresentation`",
-      "duration": 6,
-      "result": "failed",
-      "err": {
-        "stack": "Error: Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld: Permission denied\n\n    at ChildProcess.exithandler (child_process.js:299:12)\n    at maybeClose (internal/child_process.js:999:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:266:5)",
-        "message": "Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld: Permission denied\n",
-        "killed": false,
-        "code": 126,
-        "signal": null,
-        "cmd": "  /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld",
-        "stdout": "",
-        "stderr": "/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld: Permission denied\n"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
-      "title": "MUST include `verifiableCredential` and `proof`",
-      "duration": 5,
-      "result": "failed",
-      "err": {
-        "stack": "Error: Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld: Permission denied\n\n    at ChildProcess.exithandler (child_process.js:299:12)\n    at maybeClose (internal/child_process.js:999:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:266:5)",
-        "message": "Command failed:   /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld\n/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld: Permission denied\n",
-        "killed": false,
-        "code": 126,
-        "signal": null,
-        "cmd": "  /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld",
-        "stdout": "",
-        "stderr": "/bin/sh: /Users/julien/work/vc-test-suite/test/vc-data-model-1.0/input/example-8.jsonld: Permission denied\n"
-      }
-    },
-    {
-      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "duration": 5,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "duration": 7,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
-      "title": "`credentialSchema` MUST provide one or more data schemas",
-      "duration": 3254,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
-      "title": "MUST specify a `type` property with a valid value",
-      "duration": 3510,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
-      "title": "MUST specify an `id` property",
-      "duration": 3551,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
-      "title": "value of `id` MUST be a URI identifying a schema file",
-      "duration": 3369,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
-      "title": "`refreshService` MUST provide one or more refresh services",
-      "duration": 4534,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
-      "title": "MUST specify a `type` property with a valid value",
-      "duration": 3420,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
-      "title": "MUST specify an `id` property",
-      "duration": 3536,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
-      "title": "value of `id` MUST be a URL identifying a service endpoint",
-      "duration": 3789,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
-      "title": "`evidence` MUST provide one or more evidence objects",
-      "duration": 4297,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
-      "title": "MUST specify a `type` property with a valid value",
-      "duration": 3982,
-      "result": "passed",
-      "err": {}
-    },
-    {
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
       "title": "MUST include `id` and `type`",
       "duration": 4687,
@@ -757,20 +102,6 @@
       }
     },
     {
-      "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
-      "title": "`termsOfUse` MUST provide one or more ToU objects",
-      "duration": 4683,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
-      "title": "MUST specify a `type` property with a valid value",
-      "duration": 3821,
-      "result": "passed",
-      "err": {}
-    },
-    {
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
       "title": "MUST be present",
       "duration": 4273,
@@ -822,6 +153,90 @@
         "expected": "Error",
         "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { Object (@context, id, ...) }"
       }
+    },
+    {
+      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
+      "title": "`credentialSchema` MUST provide one or more data schemas",
+      "duration": 3254,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+      "title": "MUST specify a `type` property with a valid value",
+      "duration": 3510,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
+      "title": "MUST specify an `id` property",
+      "duration": 3551,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "duration": 3369,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
+      "title": "`refreshService` MUST provide one or more refresh services",
+      "duration": 4534,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
+      "title": "MUST specify a `type` property with a valid value",
+      "duration": 3420,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
+      "title": "MUST specify an `id` property",
+      "duration": 3536,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
+      "title": "value of `id` MUST be a URL identifying a service endpoint",
+      "duration": 3789,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
+      "title": "`termsOfUse` MUST provide one or more ToU objects",
+      "duration": 4683,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
+      "title": "MUST specify a `type` property with a valid value",
+      "duration": 3821,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
+      "title": "`evidence` MUST provide one or more evidence objects",
+      "duration": 4297,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
+      "title": "MUST specify a `type` property with a valid value",
+      "duration": 3982,
+      "result": "passed",
+      "err": {}
     },
     {
       "fullTitle": "Zero-Knowledge Proofs (optional) A verifiable credential... MUST contain a credentialSchema",

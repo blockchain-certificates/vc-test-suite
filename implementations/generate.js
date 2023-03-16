@@ -9,11 +9,21 @@
 const fs = require('fs');
 const path = require('path');
 
+function getImplementer () {
+  const implementerArgIndex = process.argv.findIndex(arg => arg === '--implementer');
+  if (implementerArgIndex > -1) {
+    return process.argv[implementerArgIndex + 1];
+  }
+  return '';
+}
+
 // extract the results from all of the test files
 const implementations = [];
 const dirContents = fs.readdirSync(__dirname);
+const implementer = getImplementer();
+const reportFilesRegex = new RegExp(`.*${implementer}-report.json`, 'ig');
 const files = dirContents.filter(
-  (contents) => {return contents.match(/.*-report.json/ig);});
+  (contents) => {return contents.match(reportFilesRegex);});
 
 const sections = {
   'Basic Documents': 'basic',
