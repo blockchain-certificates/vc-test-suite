@@ -11,7 +11,7 @@
     "mocha-spec-json-output-reporter": "^1.1.7"
   },
   "scripts": {
-    "postinstall": "node bin/postinstall.js",
+    "postinstall": "echo \"vc-test-suite postinstall\"",
     "report": "mocha --recursive test/vc-data-model-1.0/ -R mocha-spec-json-output-reporter --reporter-options fileName=report-basic.json,hierarchy=true",
     "summary": "node implementations/generate.js",
     "summary:blockcerts": "node implementations/generate.js --implementer blockcerts",
