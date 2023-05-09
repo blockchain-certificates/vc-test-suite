@@ -2,7 +2,7 @@
 
 pwd
 echo "installing mocha globally"
-npm i -g mocha mocha-spec-json-output-reporter
+npm i -g mocha mocha-spec-json-output-reporter chai
 echo "starting issuer..."
 npm run start:issuer
 echo "issuer started, running blockcerts reporting tests"
