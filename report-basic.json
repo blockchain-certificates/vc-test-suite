@@ -5,9 +5,9 @@
     "passes": 30,
     "pending": 63,
     "failures": 1,
-    "start": "2023-03-14T13:10:09.489Z",
-    "end": "2023-03-14T13:11:18.737Z",
-    "duration": 69248
+    "start": "2023-05-04T11:00:31.961Z",
+    "end": "2023-05-04T11:01:40.386Z",
+    "duration": 68425
   },
   "suites": [
     {
@@ -20,7 +20,7 @@
             {
               "fullTitle": "@context MUST be one or more URIs",
               "title": "MUST be one or more URIs",
-              "duration": 3,
+              "duration": 2,
               "result": "passed",
               "err": {}
             },
@@ -47,7 +47,7 @@
             {
               "fullTitle": "`id` properties MUST be a single URI",
               "title": "MUST be a single URI",
-              "duration": 1,
+              "duration": 0,
               "result": "passed",
               "err": {}
             }
@@ -67,7 +67,7 @@
             {
               "fullTitle": "`type` properties for Credential MUST be `VerifiableCredential` plus specific type",
               "title": "for Credential MUST be `VerifiableCredential` plus specific type",
-              "duration": 1,
+              "duration": 0,
               "result": "passed",
               "err": {}
             }
@@ -80,14 +80,14 @@
             {
               "fullTitle": "`credentialSubject` property MUST be present",
               "title": "MUST be present",
-              "duration": 1,
+              "duration": 0,
               "result": "passed",
               "err": {}
             },
             {
               "fullTitle": "`credentialSubject` property MUST be present, may be a set of objects",
               "title": "MUST be present, may be a set of objects",
-              "duration": 0,
+              "duration": 1,
               "result": "passed",
               "err": {}
             }
@@ -127,7 +127,7 @@
             {
               "fullTitle": "`issuanceDate` property MUST be an RFC3339 datetime",
               "title": "MUST be an RFC3339 datetime",
-              "duration": 1,
+              "duration": 0,
               "result": "passed",
               "err": {}
             }
@@ -153,7 +153,7 @@
             {
               "fullTitle": "Presentations MUST be of type `VerifiablePresentation`",
               "title": "MUST be of type `VerifiablePresentation`",
-              "duration": 0,
+              "duration": 1,
               "result": "passed",
               "err": {}
             },
@@ -179,7 +179,7 @@
             {
               "fullTitle": "@context MUST be one or more URIs (negative)",
               "title": "MUST be one or more URIs (negative)",
-              "duration": 60007,
+              "duration": 60006,
               "result": "failed",
               "err": {
                 "stack": "Error: Timeout of 60000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/Users/julien/work/vc-test-suite/test/vc-data-model-1.0/11-basic-negatives.js)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)",
@@ -189,7 +189,7 @@
             {
               "fullTitle": "@context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
               "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-              "duration": 1378,
+              "duration": 1164,
               "result": "passed",
               "err": {}
             }
@@ -202,7 +202,7 @@
             {
               "fullTitle": "`id` properties MUST be a single URI (negative)",
               "title": "MUST be a single URI (negative)",
-              "duration": 110,
+              "duration": 122,
               "result": "passed",
               "err": {}
             }
@@ -215,14 +215,14 @@
             {
               "fullTitle": "`type` properties MUST be one or more URIs (negative)",
               "title": "MUST be one or more URIs (negative)",
-              "duration": 108,
+              "duration": 118,
               "result": "passed",
               "err": {}
             },
             {
               "fullTitle": "`type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
               "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-              "duration": 108,
+              "duration": 112,
               "result": "passed",
               "err": {}
             }
@@ -235,7 +235,7 @@
             {
               "fullTitle": "`credentialSubject` property MUST be present (negative - credentialSubject missing)",
               "title": "MUST be present (negative - credentialSubject missing)",
-              "duration": 114,
+              "duration": 112,
               "result": "passed",
               "err": {}
             }
@@ -248,14 +248,14 @@
             {
               "fullTitle": "`issuer` property MUST be present (negative - missing issuer)",
               "title": "MUST be present (negative - missing issuer)",
-              "duration": 119,
+              "duration": 108,
               "result": "passed",
               "err": {}
             },
             {
               "fullTitle": "`issuer` property MUST be a single URI (negative - not URI)",
               "title": "MUST be a single URI (negative - not URI)",
-              "duration": 111,
+              "duration": 107,
               "result": "passed",
               "err": {}
             },
@@ -275,21 +275,21 @@
             {
               "fullTitle": "`issuanceDate` property MUST be present (negative - missing issuanceDate)",
               "title": "MUST be present (negative - missing issuanceDate)",
-              "duration": 110,
+              "duration": 109,
               "result": "passed",
               "err": {}
             },
             {
               "fullTitle": "`issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
               "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
-              "duration": 109,
+              "duration": 121,
               "result": "passed",
               "err": {}
             },
             {
               "fullTitle": "`issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
               "title": "MUST be an RFC3339 datetime (negative - Array)",
-              "duration": 108,
+              "duration": 124,
               "result": "passed",
               "err": {}
             }
@@ -302,14 +302,14 @@
             {
               "fullTitle": "`expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
               "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
-              "duration": 107,
+              "duration": 116,
               "result": "passed",
               "err": {}
             },
             {
               "fullTitle": "`expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
               "title": "MUST be an RFC3339 datetime (negative - Array)",
-              "duration": 107,
+              "duration": 117,
               "result": "passed",
               "err": {}
             }
@@ -322,14 +322,14 @@
             {
               "fullTitle": "Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
               "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-              "duration": 114,
+              "duration": 115,
               "result": "passed",
               "err": {}
             },
             {
               "fullTitle": "Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
               "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-              "duration": 109,
+              "duration": 118,
               "result": "passed",
               "err": {}
             }
@@ -1253,7 +1253,7 @@
     {
       "fullTitle": "@context MUST be one or more URIs (negative)",
       "title": "MUST be one or more URIs (negative)",
-      "duration": 60007,
+      "duration": 60006,
       "result": "failed",
       "err": {
         "stack": "Error: Timeout of 60000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (/Users/julien/work/vc-test-suite/test/vc-data-model-1.0/11-basic-negatives.js)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)",
@@ -1265,7 +1265,7 @@
     {
       "fullTitle": "@context MUST be one or more URIs",
       "title": "MUST be one or more URIs",
-      "duration": 3,
+      "duration": 2,
       "result": "passed",
       "err": {}
     },
@@ -1286,7 +1286,7 @@
     {
       "fullTitle": "`id` properties MUST be a single URI",
       "title": "MUST be a single URI",
-      "duration": 1,
+      "duration": 0,
       "result": "passed",
       "err": {}
     },
@@ -1300,21 +1300,21 @@
     {
       "fullTitle": "`type` properties for Credential MUST be `VerifiableCredential` plus specific type",
       "title": "for Credential MUST be `VerifiableCredential` plus specific type",
-      "duration": 1,
+      "duration": 0,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "`credentialSubject` property MUST be present",
       "title": "MUST be present",
-      "duration": 1,
+      "duration": 0,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "`credentialSubject` property MUST be present, may be a set of objects",
       "title": "MUST be present, may be a set of objects",
-      "duration": 0,
+      "duration": 1,
       "result": "passed",
       "err": {}
     },
@@ -1342,7 +1342,7 @@
     {
       "fullTitle": "`issuanceDate` property MUST be an RFC3339 datetime",
       "title": "MUST be an RFC3339 datetime",
-      "duration": 1,
+      "duration": 0,
       "result": "passed",
       "err": {}
     },
@@ -1356,7 +1356,7 @@
     {
       "fullTitle": "Presentations MUST be of type `VerifiablePresentation`",
       "title": "MUST be of type `VerifiablePresentation`",
-      "duration": 0,
+      "duration": 1,
       "result": "passed",
       "err": {}
     },
@@ -1370,49 +1370,49 @@
     {
       "fullTitle": "@context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "duration": 1378,
+      "duration": 1164,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "`id` properties MUST be a single URI (negative)",
       "title": "MUST be a single URI (negative)",
-      "duration": 110,
+      "duration": 122,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "`type` properties MUST be one or more URIs (negative)",
       "title": "MUST be one or more URIs (negative)",
-      "duration": 108,
+      "duration": 118,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "`type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "duration": 108,
+      "duration": 112,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "`credentialSubject` property MUST be present (negative - credentialSubject missing)",
       "title": "MUST be present (negative - credentialSubject missing)",
-      "duration": 114,
+      "duration": 112,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "`issuer` property MUST be present (negative - missing issuer)",
       "title": "MUST be present (negative - missing issuer)",
-      "duration": 119,
+      "duration": 108,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "`issuer` property MUST be a single URI (negative - not URI)",
       "title": "MUST be a single URI (negative - not URI)",
-      "duration": 111,
+      "duration": 107,
       "result": "passed",
       "err": {}
     },
@@ -1426,49 +1426,49 @@
     {
       "fullTitle": "`issuanceDate` property MUST be present (negative - missing issuanceDate)",
       "title": "MUST be present (negative - missing issuanceDate)",
-      "duration": 110,
+      "duration": 109,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "`issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 109,
+      "duration": 121,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "`issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
       "title": "MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 108,
+      "duration": 124,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "`expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 107,
+      "duration": 116,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "`expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
       "title": "MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 107,
+      "duration": 117,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "duration": 114,
+      "duration": 115,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
       "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "duration": 109,
+      "duration": 118,
       "result": "passed",
       "err": {}
     }
