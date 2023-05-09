@@ -15,7 +15,7 @@ async function batchDocuments (files = [], options = {}) {
   const {stdout, stderr} = await exec(options.generator + ' ' +
     options.generatorOptions + ' ' + filePaths);
 
-  // console.log('Resolved signed documents', stdout);
+  console.log('Resolved signed documents', stdout);
 
   if(stderr) {
     throw new Error(stderr);
