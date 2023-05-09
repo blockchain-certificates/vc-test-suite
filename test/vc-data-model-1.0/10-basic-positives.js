@@ -38,6 +38,7 @@ describe('Basic Documents (positive tests)', function() {
         'example-8.jsonld',
         'example-014-credential-subjects.jsonld'
       ], generatorOptions);
+      console.log(documents);
     } catch (e) {
       console.error(e);
     }
