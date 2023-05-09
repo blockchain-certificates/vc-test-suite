@@ -26,16 +26,17 @@ const files = dirContents.filter(
   (contents) => {return contents.match(reportFilesRegex);});
 
 const sections = {
-  'Basic Documents': 'basic',
-  'Credential Status (optional)': 'status',
+  'Basic Documents': '10-basic-positives',
+  'Basic Documents': '10-basic-negatives',
+  'Credential Status (optional)': '23-status',
   'Advanced Documents': 'advanced',
-  'Linked Data Proofs (optional)': 'ldp',
-  'Credential Schema (optional)': 'schema',
-  'Refresh Service (optional)': 'refresh',
-  'Terms of Use (optional)': 'tou',
-  'Evidence (optional)': 'evidence',
-  'JWT (optional)': 'jwt',
-  'Zero-Knowledge Proofs (optional)': 'zkp'
+  'Linked Data Proofs (optional)': '40-ldp',
+  'Credential Schema (optional)': '20-schema',
+  'Refresh Service (optional)': '21-refresh',
+  'Terms of Use (optional)': '35-tou',
+  'Evidence (optional)': '22-evidence',
+  'JWT (optional)': '50-jwt',
+  'Zero-Knowledge Proofs (optional)': '60-zkp'
 }
 const skipSections = [];
 const noTestsSections = [];
@@ -67,11 +68,14 @@ for(let s of sectionNames) {
 }
 
 // process each test file
+console.log(files);
 files.forEach((file) => {
   const implementation = file.match(/(.*)-report.json/)[1];
   implementations.push(implementation);
 
   const rawMochaResults = require(path.join(__dirname, file));
+
+  console.log(rawMochaResults);
 
   const skippedTests = rawMochaResults.pending || [];
 

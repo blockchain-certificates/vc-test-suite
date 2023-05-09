@@ -2,16 +2,17 @@ const fs = require('fs');
 const path = require('path');
 
 const sections = {
-  'basic': 'Basic Documents',
-  'status': 'Credential Status (optional)',
+  '10-basic-positives': 'Basic Documents',
+  '11-basic-negatives': 'Basic Documents',
+  '23-status': 'Credential Status (optional)',
   'advanced': 'Advanced Documents',
-  'ldp': 'Linked Data Proofs (optional)',
-  'schema': 'Credential Schema (optional)',
-  'refresh': 'Refresh Service (optional)',
-  'tou': 'Terms of Use (optional)',
-  'evidence': 'Evidence (optional)',
-  'jwt': 'JWT (optional)',
-  'zkp': 'Zero-Knowledge Proofs (optional)'
+  '40-ldp': 'Linked Data Proofs (optional)',
+  '20-schema': 'Credential Schema (optional)',
+  '21-refresh': 'Refresh Service (optional)',
+  '35-tou': 'Terms of Use (optional)',
+  '22-evidence': 'Evidence (optional)',
+  '50-jwt': 'JWT (optional)',
+  '60-zkp': 'Zero-Knowledge Proofs (optional)'
 }
 
 function saveInFile (tests, stats) {
@@ -60,7 +61,7 @@ function getTestsIn (suites, file, sortedTests = []) {
 function reconcileReport () {
   const supportedTests = Object.keys(sections);
 
-  const files = supportedTests.filter(suiteName => suiteName !== 'jwt').map(suiteName => ({
+  const files = supportedTests.filter(suiteName => suiteName !== '50-jwt').map(suiteName => ({
     fileName: `report-${suiteName}.json`,
     sectionName: sections[suiteName]
   }));
