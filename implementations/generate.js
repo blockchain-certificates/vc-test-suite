@@ -29,7 +29,6 @@ const sections = {
   'Basic Documents': '10-basic-positives',
   'Basic Documents': '10-basic-negatives',
   'Credential Status (optional)': '23-status',
-  'Advanced Documents': 'advanced',
   'Linked Data Proofs (optional)': '40-ldp',
   'Credential Schema (optional)': '20-schema',
   'Refresh Service (optional)': '21-refresh',
