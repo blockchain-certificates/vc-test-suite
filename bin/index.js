@@ -56,12 +56,23 @@ if (command === 'set-config') {
   console.log('change option', option);
   const value = process.argv[4];
   console.log('with value', value);
-  if (!config[option].includes(value)) {
-    config[option] = value + ' ' + config[option];
-  } else {
+  if (config[option].includes(value)) {
     console.log('option already contains this value, skipping');
+  } else {
+    const newValue = value.split(' ');
+    let currentValue = config[option].split(' ');
+
+    const optionKey = newValue[0];
+    if (currentValue.includes(optionKey)) {
+      const optionIndex = currentValue.findIndex(currentOption => currentOption === optionKey);
+      currentValue[optionIndex + 1] = newValue[1];
+    } else {
+      currentValue = newValue.concat(currentValue);
+    }
+    const newValueString = currentValue.join(' ');
+    config[option] = newValueString;
   }
   console.log('new config', config);
   fs.writeFileSync(path.join(__dirname, '..', 'config.blockcerts.json'), JSON.stringify(config, null, 2));
-  console.log('done');
+  console.log('done updating config');
 }
