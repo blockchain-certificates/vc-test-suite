@@ -27,6 +27,7 @@ if (command === 'test') {
 }
 
 if (command === 'report:blockcerts') {
+  console.log('running vc compliance test with report');
   exec(`sh ${__dirname}/run-blockcerts-report.sh`, {
     cwd: path.join(__dirname, '..')
   }, (error, stdout, stderr) => {
