@@ -1,6 +1,6 @@
 {
-  "generator": "node node_modules/cert-issuer-node-wrapper/callIssue ",
-  "presentationGenerator": "node node_modules/cert-issuer-node-wrapper/callIssue ",
+  "generator": "node ./node_modules/cert-issuer-node-wrapper/callIssue.js ",
+  "presentationGenerator": "node ./node_modules/cert-issuer-node-wrapper/callIssue.js ",
   "generatorOptions": "--issuer_path /Users/julien/work/cert-issuer --files",
   "sectionsNotSupported": [
     "schema",
