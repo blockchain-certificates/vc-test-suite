@@ -11,7 +11,7 @@ async function batchDocuments (files = [], options = {}) {
   const filePaths = files.map(file => path.join(__dirname, 'input', file));
   // console.log('Prepared for batch', filePaths);
   // console.log('execute command', options.generator + ' ' +
-    options.generatorOptions + ' ' + filePaths);
+  //   options.generatorOptions + ' ' + filePaths);
   const {stdout, stderr} = await exec(options.generator + ' ' +
     options.generatorOptions + ' ' + filePaths);
 

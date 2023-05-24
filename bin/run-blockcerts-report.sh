@@ -10,7 +10,6 @@ for ENTRY in "$TESTS_DIR"/*.js
 do
   REPORT_NAME=${ENTRY%.js*}
   REPORT_NAME=${REPORT_NAME##*/}
-  echo $REPORT_NAME
   npx mocha "$ENTRY" -R mocha-spec-json-output-reporter --reporter-options fileName=report-${REPORT_NAME}.json,hierarchy=true
 done
 echo "tests have been run, stopping issuer"
