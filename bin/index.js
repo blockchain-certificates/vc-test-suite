@@ -6,7 +6,7 @@ const fs = require('fs');
 
 const command = process.argv[2];
 
-console.log('cwd', process.cwd());
+// console.log('cwd', process.cwd());
 
 if (command === 'test') {
   exec(`sh ${__dirname}/run-tests.sh`, {
@@ -28,8 +28,6 @@ if (command === 'test') {
 
 if (command === 'report:blockcerts') {
   console.log('running vc compliance test with report');
-  console.log('current dir:', __dirname);
-  console.log('path', process.env.PATH);
   exec(`sh ${__dirname}/run-blockcerts-report.sh`, {
     cwd: path.join(__dirname, '..')
   }, (error, stdout, stderr) => {
@@ -54,11 +52,11 @@ if (command === 'set-config') {
   const config = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config.blockcerts.json'), {
     encoding: 'utf8'
   }));
-  console.log('current config', config);
+  // console.log('current config', config);
   const option = process.argv[3];
-  console.log('change option', option);
+  // console.log('change option', option);
   const value = process.argv[4];
-  console.log('with value', value);
+  // console.log('with value', value);
   if (config[option].includes(value)) {
     console.log('option already contains this value, skipping');
   } else {
