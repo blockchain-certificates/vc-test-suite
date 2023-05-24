@@ -9,13 +9,13 @@ const exec = util.promisify(require('child_process').exec);
 
 async function batchDocuments (files = [], options = {}) {
   const filePaths = files.map(file => path.join(__dirname, 'input', file));
-  console.log('Prepared for batch', filePaths);
-  console.log('execute command', options.generator + ' ' +
+  // console.log('Prepared for batch', filePaths);
+  // console.log('execute command', options.generator + ' ' +
     options.generatorOptions + ' ' + filePaths);
   const {stdout, stderr} = await exec(options.generator + ' ' +
     options.generatorOptions + ' ' + filePaths);
 
-  console.log('Resolved signed documents', stdout);
+  // console.log('Resolved signed documents', stdout);
 
   if(stderr) {
     throw new Error(stderr);
