@@ -66,19 +66,21 @@ for(let s of sectionNames) {
   allResults.set(sections[s], new Map());
 }
 
+let hasFailed = false;
+
 // process each test file
-console.log(files);
+// console.log(files);
 files.forEach((file) => {
   const implementation = file.match(/(.*)-report.json/)[1];
   implementations.push(implementation);
 
   const rawMochaResults = require(path.join(__dirname, file));
 
-  console.log(rawMochaResults);
+  // console.log(rawMochaResults);
 
   const skippedTests = rawMochaResults.pending || [];
 
-  console.log('Parsing report for:', implementation);
+  // console.log('Parsing report for:', implementation);
 
   // process each test in implementation's suite, noting the result
   rawMochaResults.tests.forEach((test) => {
@@ -114,6 +116,10 @@ files.forEach((file) => {
       testResult = 'no support';
     } else {
       testResult = noErrors ? 'success' : 'failure';
+    }
+
+    if (testResult === 'failure') {
+      hasFailed = true;
     }
 
     const shortTitle = fullTitle.split(section + ' ')[1];
@@ -185,5 +191,8 @@ const template = fs.readFileSync(
 
 fs.writeFileSync(path.join(__dirname, 'index.html'),
   template.replace('%%%REPORTS%%%', conformanceTable));
+
+fs.writeFileSync(path.join(__dirname, 'test-status.txt'),
+  hasFailed ? 'failure' : 'compliant');
 
 console.log("Generated new implementation report.");
