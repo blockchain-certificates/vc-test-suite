@@ -5,6 +5,7 @@ echo "installing mocha globally"
 npm i -g mocha
 echo "starting issuer..."
 npm run start:issuer
+lsof -t -i 3000 # get pid of running server
 echo "issuer started, running tests"
 tests_dir=./test/vc-data-model-1.0
 
