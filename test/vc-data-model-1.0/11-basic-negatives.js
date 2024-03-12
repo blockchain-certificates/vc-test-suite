@@ -31,7 +31,7 @@ describe('Basic Documents (negative tests)', function() {
     async function() {
       await expect(util.generate(
         'example-1-bad-url.jsonld', generatorOptions))
-        .to.be.rejectedWith(Error, 'First @context declared must be https://www.w3.org/2018/credentials/v1, was given https://www.w3.org/2018/credentials/examples/v1');
+        .to.be.rejectedWith(Error, 'First @context declared must be one of [\'https://www.w3.org/2018/credentials/v1\', \'https://www.w3.org/ns/credentials/v2\'], was given https://www.w3.org/2018/credentials/examples/v1');
     });
   });
 
