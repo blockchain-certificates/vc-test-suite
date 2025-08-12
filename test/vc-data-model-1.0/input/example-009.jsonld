@@ -15,7 +15,7 @@
     }
   },
   "credentialSchema": {
-    "id": "https://example.org/examples/degree.json",
+    "id": "https://www.blockcerts.org/samples/3.0/vc-v1-test-suite-degree-schema.json",
     "type": "JsonSchemaValidator2018"
   },
   "proof": {

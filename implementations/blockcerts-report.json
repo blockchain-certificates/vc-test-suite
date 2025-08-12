@@ -1,126 +1,231 @@
 {
   "tests": [
     {
-      "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
-      "title": "MUST be one or more URIs (negative)",
-      "duration": 1379,
+      "fullTitle": "Basic Documents @context MUST be one or more URIs",
+      "title": "MUST be one or more URIs",
+      "duration": 2,
       "result": "passed",
       "err": {}
     },
     {
+      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1",
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
+      "duration": 0,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
+      "title": "subsequent items can be objects that express context information",
+      "duration": 1,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents `id` properties MUST be a single URI",
+      "title": "MUST be a single URI",
+      "duration": 0,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
+      "title": "MUST be one or more URIs",
+      "duration": 0,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type",
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type",
+      "duration": 1,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
+      "title": "MUST be present",
+      "duration": 0,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
+      "title": "MUST be present, may be a set of objects",
+      "duration": 0,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents `issuer` property MUST be present",
+      "title": "MUST be present",
+      "duration": 0,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI",
+      "title": "MUST be a single URI",
+      "duration": 0,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
+      "title": "MUST be present",
+      "duration": 0,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
+      "title": "MUST be an RFC3339 datetime",
+      "duration": 0,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
+      "title": "MUST be an RFC3339 datetime",
+      "duration": 0,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
+      "title": "MUST be of type `VerifiablePresentation`",
+      "duration": 0,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof`",
+      "title": "MUST include `verifiableCredential` and `proof`",
+      "duration": 0,
+      "result": "passed",
+      "err": {}
+    },
+    {
+      "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
+      "title": "MUST be one or more URIs (negative)",
+      "duration": 1077,
+      "result": "failed",
+      "err": {
+        "message": "expected promise to be rejected with an error including 'ValueError: A more specific type: Alu…' but got '{\\n  success: false,\\n  stderr: \\'WAR…'",
+        "showDiff": true,
+        "actual": "{\n  success: false,\n  stderr: 'WARNING - Your app is configured to skip the wifi check when the USB is plugged in. Read the documentation to ensure this is what you want, since this is less secure\\n' +\n    'INFO - This run will try to issue on the mockchain chain\\n' +\n    'INFO - Computed digest HeY6gPH0rk84EMW6thb+q43eQC1NdeMmc7y+6sK+EazxNx3QPrh+fMR/vZU6FPVZ with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiDujDc8uDHpLwAzt_JrYaQ7JxmTKiDaLDluXa1I7EKbLQ with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest BpntgavJwU61z0GKEhWq+1fnE9Ewd0+tyAFaOPO6HxZ9MluEru55MEX6EuN1rIP4 with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiBpxCehuxe8g1msAqkRttA9L88iGWAtoeJFCyi5KUuU2w with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest l/HrjlBCNWyAX91hr6LFV2Y3heB5Tcr6IeE4/Tje8YyzYBM8IhqjHWiWpr8+ZbYU with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiBZlVztZpfWHgPyslVv6-UwirFoQoRvW1htfx963sknNA with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest h7xSnA8bDKlePXkPFkVDPemTsb1KOxdL1y5kCbtzce5IuiZg/CZsKNReJuEQ3Hhl with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiCVO5NOyVT6sGw9SOUkrGbw9mUxuG-pEzD2bo_EulNv9A with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest KgbzfsLya1fJJVXttE+OQveQBWBBIwe9Nyq7Ca7V5s2H3F42c5Z4xlGHf4oY8O/Q with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiDZLeSA6UeKdrpkpnIJ4VtHRnWODyjwdKS13FrIpoQHPQ with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest Oc9AfsrrWHpZ4uNnOEIZ0U5S1Zl2JM5hu8mvSn5OP2IF5dEAtMTm/R4ZvDcEbFGU with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiBt0GpSvtt3HgWcEIO6i6eEjc4i9rSoz6C5i6P8GIhw5A with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest DuLXYmcX+LB81Em1JdXitx/icgn8meUwieAWndKUTXk/7qRSb8YLucyhzZZRI5H2 with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiBn8h5uM6bBTlzP0vx4ZfdHT7caBK9-lBNss5nfrIro9A with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest YsTtV59OofiSYBhVXSV2/TzIBYZzn5oL3uHZT2/jGK0fNuFEg2mxNG8gD2ns3cTS with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiB7Wk-XcWQJGLbjFpryk3Szip-RTc_td2ddt5RMjxoRUg with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest tfLYFxlF6V7xhZ2oUKlM9N3KYhrzERCr0rDkf+LPReTpzyHo2PtrGJbV/0bmkbr6 with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiAvwHNnnw4Fu6WYSjEQwL_PvJQBwqWHQRXpqbsSIEAB8w with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest UGZWyMWJpOzgT9OYBkWl6EOzHfHliQPHlUZHc+nKyX8XaMcq1S3uHO0Gg9KxWGKz with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiD6Wv6ZNyDebQMNx4y40zCF5OilhwTibI7vpTb0q3uXMQ with hashing algorithm: sha256\\n' +\n    'INFO - Processing 2 certificates\\n' +\n    'INFO - Processing 2 certificates under work path=/Users/julien/work/cert-issuer/data/work\\n' +\n    'WARNING - \\n' +\n    \"           Last `@context` is not blockcerts' context. It is not a critical issue but some issues have come up at times\\n\" +\n    \"           because of some properties of a different context overwriting blockcerts' taxonomy. Check this property\\n\" +\n    '           again in case of verification issue.\\n' +\n    '           \\n' +\n    'WARNING - \\n' +\n    '            The metadata object provided with the certificate does not include a `schema` property.\\n' +\n    '            Not defining such property will result in errors in the rendering of the metadata property in the UI projects. \\n' +\n    '            \\n' +\n    'WARNING - \\n' +\n    '           The metadata object provided with the certificate does not include a `displayOrder` property.\\n' +\n    '           Not defining such property will result in errors in the rendering of the metadata property in the UI projects. \\n' +\n    '           \\n' +\n    'INFO - Validating a VC v2 credential\\n' +\n    'INFO - Starting finalizable signer\\n' +\n    'WARNING - app is configured to skip the wifi check when the USB is plugged in. Read the documentation to ensure this is what you want, since this is less secure\\n' +\n    'INFO - Stopping finalizable signer\\n' +\n    'WARNING - app is configured to skip the wifi check when the USB is plugged in. Read the documentation to ensure this is what you want, since this is less secure\\n' +\n    'INFO - preload contexts before normalization\\n' +\n    \"INFO - adding preloaded context {'@context': {'id': '@id', 'type': '@type', '@protected': True, 'proof': {'@id': 'https://w3id.org/security#proof', '@type': '@id', '@container': '@graph'}, 'Ed25519VerificationKey2020': {'@id': 'https://w3id.org/security#Ed25519VerificationKey2020', '@context': {'@protected': True, 'id': '@id', 'type': '@type', 'controller': {'@id': 'https://w3id.org/security#controller', '@type': '@id'}, 'revoked': {'@id': 'https://w3id.org/security#revoked', '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'}, 'publicKeyMultibase': {'@id': 'https://w3id.org/security#publicKeyMultibase', '@type': 'https://w3id.org/security#multibase'}}}, 'Ed25519Signature2020': {'@id': 'https://w3id.org/security#Ed25519Signature2020', '@context': {'@protected': True, 'id': '@id', 'type': '@type', 'challenge': 'https://w3id.org/security#challenge', 'created': {'@id': 'http://purl.org/dc/terms/created', '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'}, 'domain': 'https://w3id.org/security#domain', 'expires': {'@id': 'https://w3id.org/security#expiration', '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'}, 'nonce': 'https://w3id.org/security#nonce', 'proofPurpose': {'@id': 'https://w3id.org/security#proofPurpose', '@type': '@vocab', '@context': {'@protected': True, 'id': '@id', 'type': '@type', 'assertionMethod': {'@id': 'https://w3id.org/security#assertionMethod', '@type': '@id', '@container': '@set'}, 'authentication': {'@id': 'https://w3id.org/security#authenticationMethod', '@type': '@id', '@container': '@set'}, 'capabilityInvocation': {'@id': 'https://w3id.org/security#capabilityInvocationMethod', '@type': '@id', '@container': '@set'}, 'capabilityDelegation': {'@id': 'https://w3id.org/security#capabilityDelegationMethod', '@type': '@id', '@container': '@set'}, 'keyAgreement': {'@id': 'https://w3id.org/security#keyAgreementMethod', '@type': '@id', '@container': '@set'}}}, 'proofValue': {'@id': 'https://w3id.org/security#proofValue', '@type': 'https://w3id.org/security#multibase'}, 'verificationMethod': {'@id': 'https://w3id.org/security#verificationMethod', '@type': '@id'}}}}} for https://w3id.org/security/suites/ed25519-2020/v1\\n\" +\n    \"INFO - adding preloaded context {'@context': {'id': '@id', 'type': '@type', '@protected': True, 'proof': {'@id': 'https://w3id.org/security#proof', '@type': '@id', '@container': '@graph'}, 'privateKeyBase58': {'@id': 'https://w3id.org/security#privateKeyBase58'}, 'privateKeyMultibase': {'@id': 'https://w3id.org/security#privateKeyMultibase'}, 'P256Key2021': {'@id': 'https://w3id.org/security#P256Key2021', '@context': {'@protected': True, 'id': '@id', 'type': '@type', 'controller': {'@id': 'https://w3id.org/security#controller', '@type': '@id'}, 'revoked': {'@id': 'https://w3id.org/security#revoked', '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'}, 'publicKeyBase58': {'@id': 'https://w3id.org/security#publicKeyBase58'}, 'publicKeyMultibase': {'@id': 'https://w3id.org/security#publicKeyMultibase'}}}, 'P384Key2021': {'@id': 'https://w3id.org/security#P384Key2021', '@context': {'@protected': True, 'id': '@id', 'type': '@type', 'controller': {'@id': 'https://w3id.org/security#controller', '@type': '@id'}, 'revoked': {'@id': 'https://w3id.org/security#revoked', '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'}, 'publicKeyBase58': {'@id': 'https://w3id.org/security#publicKeyBase58'}, 'publicKeyMultibase': {'@id': 'https://w3id.org/security#publicKeyMultibase'}}}, 'P521Key2021': {'@id': 'https://w3id.org/security#P521Key2021', '@context': {'@protected': True, 'id': '@id', 'type': '@type', 'controller': {'@id': 'https://w3id.org/security#controller', '@type': '@id'}, 'revoked': {'@id': 'https://w3id.org/security#revoked', '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'}, 'publicKeyBase58': {'@id': 'https://w3id.org/security#publicKeyBase58'}, 'publicKeyMultibase': {'@id': 'https://w3id.org/security#publicKeyMultibase'}}}, 'Ed25519Key2021': {'@id': 'https://w3id.org/security#Ed25519Key2021', '@context': {'@protected': True, 'id': '@id', 'type': '@type', 'controller': {'@id': 'https://w3id.org/security#controller', '@type': '@id'}, 'revoked': {'@id': 'https://w3id.org/security#revoked', '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'}, 'publicKeyBase58': {'@id': 'https://w3id.org/security#publicKeyBase58'}, 'publicKeyMultibase': {'@id': 'https://w3id.org/security#publicKeyMultibase'}}}, 'X25519Key2021': {'@id': 'https://w3id.org/security#X25519Key2021', '@context': {'@protected': True, 'id': '@id', 'type': '@type', 'controller': {'@id': 'https://w3id.org/security#controller', '@type': '@id'}, 'revoked': {'@id': 'https://w3id.org/security#revoked', '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'}, 'publicKeyBase58': {'@id': 'https://w3id.org/security#publicKeyBase58'}, 'publicKeyMultibase': {'@id': 'https://w3id.org/security#publicKeyMultibase'}}}, 'Secp256k1Key2021': {'@id': 'https://w3id.org/security#Secp256k1Key2021', '@context': {'@protected': True, 'id': '@id', 'type': '@type', 'controller': {'@id': 'https://w3id.org/security#controller', '@type': '@id'}, 'revoked': {'@id': 'https://w3id.org/security#revoked', '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'}, 'publicKeyBase58': {'@id': 'https://w3id.org/security#publicKeyBase58'}, 'publicKeyMultibase': {'@id': 'https://w3id.org/security#publicKeyMultibase'}}}, 'Bls12381G1Key2021': {'@id': 'https://w3id.org/security#Bls12381G1Key2021', '@context': {'@protected': True, 'id': '@id', 'type': '@type', 'controller': {'@id': 'https://w3id.org/security#controller', '@type': '@id'}, 'revoked': {'@id': 'https://w3id.org/security#revoked', '@type': 'http://www.w3.org/2001/XMLSchema#dateTime'}, 'publicKeyBase58': {'@id': 'https://w3id.org/security#publicKeyBase58'}, 'publicKeyMultibase': {'@id': 'https://w3id.org/security#publicKeyMultibase'}}}, 'Bls12381G2Key2021': {'@id': 'https://w3id.org/security#Bls12381G2Key2021', '@context': {'@protected': True, 'id': '@id', 'type': '@type', 'controller': {'@id': 'https://w3id.org/security#controller', '@type': '@id'}, 'revoked': {'@id': 'https://w3id.org/security#revoked', '@type': 'http://www.w3.org/2001/XMLSc\"... 24836 more characters\n}\nNo certificate returned\n",
+        "expected": "ValueError: A more specific type: AlumniCredential, was detected, yet no context seems provided for that type",
+        "operator": "strictEqual",
+        "stack": "AssertionError: expected promise to be rejected with an error including 'ValueError: A more specific type: Alu…' but got '{\\n  success: false,\\n  stderr: \\'WAR…'"
+      }
+    },
+    {
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "duration": 111,
+      "duration": 1037,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
       "title": "MUST be a single URI (negative)",
-      "duration": 112,
-      "result": "passed",
-      "err": {}
+      "duration": 1048,
+      "result": "failed",
+      "err": {
+        "message": "expected promise to be rejected with an error including '\"@id\" value must be a string.' but got '{\\n  success: false,\\n  stderr: \\'WAR…'",
+        "showDiff": true,
+        "actual": "{\n  success: false,\n  stderr: 'WARNING - Your app is configured to skip the wifi check when the USB is plugged in. Read the documentation to ensure this is what you want, since this is less secure\\n' +\n    'INFO - This run will try to issue on the mockchain chain\\n' +\n    'INFO - Computed digest HeY6gPH0rk84EMW6thb+q43eQC1NdeMmc7y+6sK+EazxNx3QPrh+fMR/vZU6FPVZ with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiDujDc8uDHpLwAzt_JrYaQ7JxmTKiDaLDluXa1I7EKbLQ with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest BpntgavJwU61z0GKEhWq+1fnE9Ewd0+tyAFaOPO6HxZ9MluEru55MEX6EuN1rIP4 with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiBpxCehuxe8g1msAqkRttA9L88iGWAtoeJFCyi5KUuU2w with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest l/HrjlBCNWyAX91hr6LFV2Y3heB5Tcr6IeE4/Tje8YyzYBM8IhqjHWiWpr8+ZbYU with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiBZlVztZpfWHgPyslVv6-UwirFoQoRvW1htfx963sknNA with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest h7xSnA8bDKlePXkPFkVDPemTsb1KOxdL1y5kCbtzce5IuiZg/CZsKNReJuEQ3Hhl with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiCVO5NOyVT6sGw9SOUkrGbw9mUxuG-pEzD2bo_EulNv9A with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest KgbzfsLya1fJJVXttE+OQveQBWBBIwe9Nyq7Ca7V5s2H3F42c5Z4xlGHf4oY8O/Q with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiDZLeSA6UeKdrpkpnIJ4VtHRnWODyjwdKS13FrIpoQHPQ with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest Oc9AfsrrWHpZ4uNnOEIZ0U5S1Zl2JM5hu8mvSn5OP2IF5dEAtMTm/R4ZvDcEbFGU with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiBt0GpSvtt3HgWcEIO6i6eEjc4i9rSoz6C5i6P8GIhw5A with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest DuLXYmcX+LB81Em1JdXitx/icgn8meUwieAWndKUTXk/7qRSb8YLucyhzZZRI5H2 with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiBn8h5uM6bBTlzP0vx4ZfdHT7caBK9-lBNss5nfrIro9A with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest YsTtV59OofiSYBhVXSV2/TzIBYZzn5oL3uHZT2/jGK0fNuFEg2mxNG8gD2ns3cTS with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiB7Wk-XcWQJGLbjFpryk3Szip-RTc_td2ddt5RMjxoRUg with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest tfLYFxlF6V7xhZ2oUKlM9N3KYhrzERCr0rDkf+LPReTpzyHo2PtrGJbV/0bmkbr6 with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiAvwHNnnw4Fu6WYSjEQwL_PvJQBwqWHQRXpqbsSIEAB8w with hashing algorithm: sha256\\n' +\n    'INFO - Computed digest UGZWyMWJpOzgT9OYBkWl6EOzHfHliQPHlUZHc+nKyX8XaMcq1S3uHO0Gg9KxWGKz with hashing algorithm: sha384\\n' +\n    'INFO - Computed digest uEiD6Wv6ZNyDebQMNx4y40zCF5OilhwTibI7vpTb0q3uXMQ with hashing algorithm: sha256\\n' +\n    'INFO - Processing 2 certificates\\n' +\n    'INFO - Processing 2 certificates under work path=/Users/julien/work/cert-issuer/data/work\\n' +\n    'WARNING - \\n' +\n    \"           Last `@context` is not blockcerts' context. It is not a critical issue but some issues have come up at times\\n\" +\n    \"           because of some properties of a different context overwriting blockcerts' taxonomy. Check this property\\n\" +\n    '           again in case of verification issue.\\n' +\n    '           \\n' +\n    'Traceback (most recent call last):\\n' +\n    '  File \"/Users/julien/.pyenv/versions/3.10.14/lib/python3.10/site-packages/cert_issuer/models/verifiable_credential.py\", line 256, in verify_credential\\n' +\n    \"    validate_id(certificate_metadata['id'])\\n\" +\n    '  File \"/Users/julien/.pyenv/versions/3.10.14/lib/python3.10/site-packages/cert_issuer/models/verifiable_credential.py\", line 55, in validate_id\\n' +\n    '    validate_url(identifier)\\n' +\n    '  File \"/Users/julien/.pyenv/versions/3.10.14/lib/python3.10/site-packages/cert_issuer/models/verifiable_credential.py\", line 39, in validate_url\\n' +\n    \"    raise ValueError('Invalid URL: {}'.format(url))\\n\" +\n    \"ValueError: Invalid URL: ['http://example.edu/credentials/3731', 'http://example.edu/credentials/3732']\\n\" +\n    '\\n' +\n    'During handling of the above exception, another exception occurred:\\n' +\n    '\\n' +\n    'Traceback (most recent call last):\\n' +\n    '  File \"/Users/julien/.pyenv/versions/3.10.14/lib/python3.10/runpy.py\", line 196, in _run_module_as_main\\n' +\n    '    return _run_code(code, main_globals, None,\\n' +\n    '  File \"/Users/julien/.pyenv/versions/3.10.14/lib/python3.10/runpy.py\", line 86, in _run_code\\n' +\n    '    exec(code, run_globals)\\n' +\n    '  File \"/Users/julien/work/cert-issuer/cert_issuer/__main__.py\", line 21, in <module>\\n' +\n    '    cert_issuer_main()\\n' +\n    '  File \"/Users/julien/work/cert-issuer/cert_issuer/__main__.py\", line 17, in cert_issuer_main\\n' +\n    '    issue_certificates.main(parsed_config)\\n' +\n    '  File \"/Users/julien/.pyenv/versions/3.10.14/lib/python3.10/site-packages/cert_issuer/issue_certificates.py\", line 34, in main\\n' +\n    '    return issue(app_config, certificate_batch_handler, transaction_handler)\\n' +\n    '  File \"/Users/julien/.pyenv/versions/3.10.14/lib/python3.10/site-packages/cert_issuer/issue_certificates.py\", line 20, in issue\\n' +\n    '    tx_id = issuer.issue(app_config.chain)\\n' +\n    '  File \"/Users/julien/.pyenv/versions/3.10.14/lib/python3.10/site-packages/cert_issuer/issuer.py\", line 23, in issue\\n' +\n    '    blockchain_bytes = self.certificate_batch_handler.prepare_batch()\\n' +\n    '  File \"/Users/julien/.pyenv/versions/3.10.14/lib/python3.10/site-packages/cert_issuer/certificate_handlers.py\", line 103, in prepare_batch\\n' +\n    '    self.certificate_handler.validate_certificate(certificate_json)\\n' +\n    '  File \"/Users/julien/.pyenv/versions/3.10.14/lib/python3.10/site-packages/cert_issuer/models/__init__.py\", line 36, in validate_certificate\\n' +\n    '    verify_credential(certificate_metadata)\\n' +\n    '  File \"/Users/julien/.pyenv/versions/3.10.14/lib/python3.10/site-packages/cert_issuer/models/verifiable_credential.py\", line 260, in verify_credential\\n' +\n    '    raise ValueError(err)\\n' +\n    \"ValueError: Invalid URL: ['http://example.edu/credentials/3731', 'http://example.edu/credentials/3732']\"\n}\nNo certificate returned\n",
+        "expected": "\"@id\" value must be a string.",
+        "operator": "strictEqual",
+        "stack": "AssertionError: expected promise to be rejected with an error including '\"@id\" value must be a string.' but got '{\\n  success: false,\\n  stderr: \\'WAR…'"
+      }
     },
     {
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
       "title": "MUST be one or more URIs (negative)",
-      "duration": 115,
+      "duration": 1066,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "duration": 112,
+      "duration": 1047,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
       "title": "MUST be present (negative - credentialSubject missing)",
-      "duration": 116,
+      "duration": 1034,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
       "title": "MUST be present (negative - missing issuer)",
-      "duration": 114,
+      "duration": 1046,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
       "title": "MUST be a single URI (negative - not URI)",
-      "duration": 122,
+      "duration": 1058,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
       "title": "MUST be a single URI (negative - Array)",
-      "duration": 126,
+      "duration": 1357,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
       "title": "MUST be present (negative - missing issuanceDate)",
-      "duration": 131,
+      "duration": 1195,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 117,
+      "duration": 1050,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
       "title": "MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 112,
+      "duration": 1058,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 106,
+      "duration": 1035,
       "result": "passed",
       "err": {}
     },
     {
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
       "title": "MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 107,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)",
-      "duration": 112,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Basic Documents Presentations MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "title": "MUST include `verifiableCredential` and `proof` (negative - missing `proof`)",
-      "duration": 119,
+      "duration": 1043,
       "result": "passed",
       "err": {}
     }
   ],
   "stats": {
-    "suites": 1,
-    "tests": 0,
-    "passes": 0,
+    "suites": 9,
+    "tests": 15,
+    "passes": 15,
     "pending": 0,
-    "failures": 1,
-    "start": "2023-05-09T14:04:07.946Z",
-    "end": "2023-05-09T14:05:07.967Z",
-    "duration": 60021
+    "failures": 0,
+    "start": "2025-08-08T11:37:46.188Z",
+    "end": "2025-08-08T11:37:49.025Z",
+    "duration": 2837
   }
 }

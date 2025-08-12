@@ -37,7 +37,7 @@ async function generate(file, options) {
     throw new Error(stderr);
   }
 
-  return JSON.parse(stdout);
+  return JSON.parse(stdout)[0];
 }
 
 async function generateJwt(file, options) {

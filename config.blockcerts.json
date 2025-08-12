@@ -3,7 +3,6 @@
   "presentationGenerator": "node ./node_modules/cert-issuer-node-wrapper/callIssue.js ",
   "generatorOptions": "--issuer_path /Users/julien/work/cert-issuer --files",
   "sectionsNotSupported": [
-    "schema",
     "refresh",
     "evidence",
     "status",

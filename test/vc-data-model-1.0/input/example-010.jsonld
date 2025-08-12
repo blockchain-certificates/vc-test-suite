@@ -16,11 +16,11 @@
   },
   "credentialSchema": [
     {
-      "id": "https://example.org/examples/degree.json",
+      "id": "https://www.blockcerts.org/samples/3.0/vc-v1-test-suite-degree-schema.json",
       "type": "JsonSchemaValidator2018"
     },
     {
-      "id": "https://example.org/examples/degree.zkp",
+      "id": "https://www.blockcerts.org/samples/3.0/vc-v1-test-suite-degree-schema.json",
       "type": "ZkpExampleSchema2018"
     }
   ],
