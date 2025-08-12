@@ -15,7 +15,7 @@ const uriRegex = /\w+:(\/?\/?)[^\s]+/;
 
 const generatorOptions = config;
 
-describe('Credential Status (optional)', function() {
+describe.only('Credential Status (optional)', function() {
 
   before(function() {
     const notSupported = generatorOptions.sectionsNotSupported || [];
