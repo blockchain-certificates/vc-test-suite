@@ -119,7 +119,7 @@ describe('Basic Documents (negative tests)', function() {
     });
   });
 
-  xdescribe('Presentations', function() {
+  describe('Presentations', function() {
     it('MUST include `verifiableCredential` and `proof` (negative - missing `verifiableCredential`)', async function() {
       await expect(util.generatePresentation(
         'example-8-bad-missing-verifiableCredential.jsonld', generatorOptions))
@@ -129,7 +129,7 @@ describe('Basic Documents (negative tests)', function() {
     it('MUST include `verifiableCredential` and `proof` (negative - missing `proof`)', async function() {
       await expect(util.generatePresentation(
         'example-8-bad-missing-proof.jsonld', generatorOptions))
-        .to.be.rejectedWith(Error, 'yo yo yo'); // TODO: not passing
+        .to.be.rejectedWith(Error);
     });
   });
 });

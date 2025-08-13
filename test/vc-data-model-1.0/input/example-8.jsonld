@@ -8,10 +8,14 @@
   "verifiableCredential": [{
     "@context": [
       "https://www.w3.org/2018/credentials/v1",
-      "https://www.w3.org/2018/credentials/examples/v1"
+      "https://www.w3.org/2018/credentials/examples/v1",
+      "https://w3id.org/security/data-integrity/v2"
     ],
     "id": "http://example.edu/credentials/3732",
-    "type": ["VerifiableCredential", "UniversityDegreeCredential"],
+    "type": [
+      "VerifiableCredential",
+      "UniversityDegreeCredential"
+    ],
     "issuer": "https://example.edu/issuers/14",
     "issuanceDate": "2010-01-01T19:23:24Z",
     "credentialSubject": {
@@ -21,9 +25,15 @@
         "name": "Bachelor of Science in Mechanical Engineering"
       }
     },
-    "proof": [{
-      "type": "RsaSignature2018"
-    }]
+    "proof": {
+      "id": "urn:uuid:8f8dbab6-61e4-4a9b-8b2a-104b3cd92ea4",
+      "type": "DataIntegrityProof",
+      "cryptosuite": "merkle-proof-2019",
+      "proofPurpose": "assertionMethod",
+      "created": "2025-08-13T12:15:08Z",
+      "proofValue": "zEuZQLZTYrdsDv2cR6eWJM7kranU8f3CFs5KR3TKmjNV51Hj2Mv2t13GDPswWCKYg3RoGjPxV2WGWkMWaLjWHnKfELDZYdSjzcgNVYD2hoYXj5ZqdYLbr36xub3UJWXfoLUtj2Rd8XFC1fYCwvDMfpbVSw2n97XYS7iiVQePWnv8j5qGx8A9KSM4yQx8BiokkBiimMxuEr82BT9M5jSaphtKcWWsHKqAPVMBpfRqq5LMCAoTmDFr8EBozNLBLcphs2AkEwgtgq9HZtBG5yk2V3vkbrmg9xPTPaWvWt9DGzJucJc",
+      "verificationMethod": "https://www.blockcerts.org/samples/3.0/issuer-blockcerts.json#key-1"
+    }
   }],
   "proof": [{
     "type": "RsaSignature2018"
