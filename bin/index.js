@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { exec } = require('child_process');
+const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
@@ -9,39 +9,48 @@ const command = process.argv[2];
 // console.log('cwd', process.cwd());
 
 if (command === 'test') {
-  exec(`sh ${__dirname}/run-tests.sh`, {
+  const child = spawn('sh', [`${__dirname}/run-tests.sh`], {
     cwd: path.join(__dirname, '..')
-  }, (error, stdout, stderr) => {
-    if (error) {
-      console.error(error);
-    }
+  });
 
-    if (stdout) {
-      console.log('stdout', stdout);
-    }
+  child.stdout.on('data', (data) => {
+    process.stdout.write(`stdout: ${data}`);
+  });
 
-    if (stderr) {
-      console.log('stderr', stderr);
-    }
+  child.stderr.on('data', (data) => {
+    process.stderr.write(`stderr: ${data}`);
+  });
+
+  child.on('error', (err) => {
+    console.error('Failed to start process:', err);
+  });
+
+  child.on('close', (code) => {
+    console.log(`Child process exited with code ${code}`);
   });
 }
 
 if (command === 'report:blockcerts') {
   console.log('running vc compliance test with report');
-  exec(`sh ${__dirname}/run-blockcerts-report.sh`, {
+
+  const child = spawn('sh', [`${__dirname}/run-blockcerts-report.sh`], {
     cwd: path.join(__dirname, '..')
-  }, (error, stdout, stderr) => {
-    if (error) {
-      console.error(error);
-    }
+  });
 
-    if (stdout) {
-      console.log('stdout', stdout);
-    }
+  child.stdout.on('data', (data) => {
+    process.stdout.write(`stdout: ${data}`);
+  });
 
-    if (stderr) {
-      console.log('stderr', stderr);
-    }
+  child.stderr.on('data', (data) => {
+    process.stderr.write(`stderr: ${data}`);
+  });
+
+  child.on('error', (err) => {
+    console.error('Failed to start process:', err);
+  });
+
+  child.on('close', (code) => {
+    console.log(`Child process exited with code ${code}`);
   });
 }
 
@@ -58,7 +67,7 @@ if (command === 'set-config') {
   const value = process.argv[4];
   // console.log('with value', value);
   if (config[option].includes(value)) {
-    console.log('option already contains this value, skipping');
+    console.log(`option ${option} already contains this value: ${value}, skipping`);
   } else {
     const newValue = value.split(' ');
     let currentValue = config[option].split(' ');
